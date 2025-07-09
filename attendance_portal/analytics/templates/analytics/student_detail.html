@@ -1,0 +1,44 @@
+{% extends "analytics/base.html" %}
+{% block title %}Student Details{% endblock %}
+{% block content %}
+<div class="level">
+    <div class="level-header">
+        <div class="level-number">4</div>
+        <div class="level-title">Individual Student Attendance Details</div>
+    </div>
+    <div class="breadcrumb">Dashboard &gt; UG Year Selection &gt; Year 2 Courses &gt; CS201 &gt; Student: John Smith (S001)</div>
+    <div class="student-details">
+        <div class="detail-card">
+            <h3>📊 Student vs Course Comparison</h3>
+            <div class="chart-placeholder">
+                Bar/Line Chart
+                <div style="font-size: 0.9em; margin-top: 10px;">Student: 94% vs Course Avg: 89%</div>
+            </div>
+        </div>
+        <div class="detail-card">
+            <h3>🥧 Attendance Breakdown</h3>
+            <div class="chart-placeholder">
+                Pie Chart
+                <div style="font-size: 0.9em; margin-top: 10px;">Attended: 30 sessions<br>Missed: 2 sessions</div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-card" style="margin-top: 20px;">
+        <h3>📈 Key Metrics</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="text-align: center; padding: 15px; background: white; border-radius: 8px;">
+                <div style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">94%</div>
+                <div style="color: #666;">Student Attendance</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: white; border-radius: 8px;">
+                <div style="font-size: 1.5em; font-weight: bold; color: #2196F3;">89%</div>
+                <div style="color: #666;">Course Average</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: white; border-radius: 8px;">
+                <div style="font-size: 1.5em; font-weight: bold; color: #FF9800;">+5%</div>
+                <div style="color: #666;">Above Average</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

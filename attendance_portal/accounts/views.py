@@ -5,10 +5,13 @@ from .forms import CustomLoginForm
 from django.contrib import messages
 from .forms import StaffUserRegistrationForm
 from django.contrib.auth.models import User
+from analytics.views import dashboard  
 
+#admin
+#admin
 
-#Admin
-#password
+#user
+#user
 
 
 def user_login(request):
@@ -17,7 +20,7 @@ def user_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('dashboard')
+            return redirect('analytics:dashboard')  
         else:
             messages.error(request, 'Invalid username or password')
     else:
@@ -25,14 +28,9 @@ def user_login(request):
     return render(request, 'login.html', {'form': form})
 
 
-@login_required
-def staff_dashboard(request):
-    return render(request, 'dashboard.html')
-
-
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    return redirect('accounts:login')
 
 @login_required
 def register_user(request):
@@ -44,7 +42,16 @@ def register_user(request):
             user.is_staff = True  # Make sure they can log in
             user.save()
             messages.success(request, 'New staff user registered successfully.')
-            return redirect('dashboard')
+            student_count = Student.objects.count()
+            course_count = Course.objects.count()
+            context = {
+                'student_count': student_count,
+                'course_count': course_count  
+    }
+            return redirect('analytics:dashboard')
     else:
         form = StaffUserRegistrationForm()
     return render(request, 'register.html', {'form': form})
+
+
+

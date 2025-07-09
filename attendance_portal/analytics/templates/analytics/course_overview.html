@@ -1,0 +1,53 @@
+{% extends "analytics/base.html" %}
+{% block title %}Course Overview{% endblock %}
+{% block content %}
+<div class="level">
+    <div class="level-header">
+        <div class="level-number">2</div>
+        <div class="level-title">Course Overview Page</div>
+    </div>
+    <div style="margin-bottom: 40px;">
+        <div class="breadcrumb">Dashboard &gt; UG Year Selection &gt; Year 2 Courses</div>
+        <h3 style="color: #333; margin-bottom: 15px;">📚 UG Year 2 Courses</h3>
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Students</th>
+                    <th>Avg Attendance</th>
+                    <th>Students &lt;75%</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CS201</td><td>Data Structures & Algorithms</td><td>45</td><td>89%</td><td>3 (7%)</td><td><span class="status-badge status-good">Good</span></td></tr>
+                <tr><td>MATH201</td><td>Discrete Mathematics</td><td>42</td><td>82%</td><td>8 (19%)</td><td><span class="status-badge status-warning">Monitor</span></td></tr>
+                <tr><td>ENG201</td><td>Technical Communication</td><td>48</td><td>76%</td><td>15 (31%)</td><td><span class="status-badge status-danger">At Risk</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div class="breadcrumb">Dashboard &gt; PGT Courses</div>
+        <h3 style="color: #333; margin-bottom: 15px;">🎓 PGT Courses</h3>
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Students</th>
+                    <th>Avg Attendance</th>
+                    <th>Students &lt;75%</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>MSC501</td><td>Advanced Machine Learning</td><td>28</td><td>94%</td><td>1 (4%)</td><td><span class="status-badge status-good">Excellent</span></td></tr>
+                <tr><td>MSC502</td><td>Research Methodology</td><td>32</td><td>91%</td><td>2 (6%)</td><td><span class="status-badge status-good">Good</span></td></tr>
+                <tr><td>MBA501</td><td>Strategic Management</td><td>24</td><td>88%</td><td>3 (13%)</td><td><span class="status-badge status-good">Good</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clickable-note"><strong>Actions:</strong> Click any course row to view student list for that course</div>
+</div>
+{% endblock %} 

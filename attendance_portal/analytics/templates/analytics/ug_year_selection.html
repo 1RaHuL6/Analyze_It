@@ -1,0 +1,32 @@
+{% extends "analytics/base.html" %}
+{% block title %}UG Year Selection{% endblock %}
+{% block content %}
+<div class="level">
+    <div class="level-header">
+        <div class="level-number">1.99</div>
+        <div class="level-title">UG Year Selection Page</div>
+    </div>
+    <div class="breadcrumb">Dashboard &gt; UG Year Selection</div>
+    <table class="course-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Year Description</th>
+                <th>Students</th>
+                <th>Avg Attendance</th>
+                <th>Students &lt;75%</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0</td><td>Foundation Year</td><td>156</td><td>91%</td><td>8 (5%)</td><td><span class="status-badge status-good">Excellent</span></td></tr>
+            <tr><td>1</td><td>First Year</td><td>142</td><td>87%</td><td>12 (8%)</td><td><span class="status-badge status-good">Good</span></td></tr>
+            <tr><td>2</td><td>Second Year</td><td>138</td><td>84%</td><td>18 (13%)</td><td><span class="status-badge status-warning">Monitor</span></td></tr>
+            <tr><td>3</td><td>Third Year (Final)</td><td>125</td><td>79%</td><td>25 (20%)</td><td><span class="status-badge status-warning">Monitor</span></td></tr>
+            <tr><td>4</td><td>Fourth Year (Honors)</td><td>89</td><td>88%</td><td>7 (8%)</td><td><span class="status-badge status-good">Good</span></td></tr>
+            <tr><td>5</td><td>Fifth Year (Extended)</td><td>12</td><td>72%</td><td>6 (50%)</td><td><span class="status-badge status-danger">Critical</span></td></tr>
+        </tbody>
+    </table>
+    <div class="clickable-note"><strong>Actions:</strong> Click any year row to view courses for that specific year</div>
+</div>
+{% endblock %} 
