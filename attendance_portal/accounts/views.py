@@ -42,12 +42,6 @@ def register_user(request):
             user.is_staff = True  # Make sure they can log in
             user.save()
             messages.success(request, 'New staff user registered successfully.')
-            student_count = Student.objects.count()
-            course_count = Course.objects.count()
-            context = {
-                'student_count': student_count,
-                'course_count': course_count  
-    }
             return redirect('analytics:dashboard')
     else:
         form = StaffUserRegistrationForm()

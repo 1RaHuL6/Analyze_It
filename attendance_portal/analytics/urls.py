@@ -6,7 +6,7 @@ app_name = 'analytics'
 urlpatterns = [
     path('', views.dashboard, name='dashboard'),
     path('ug-years/', views.ug_year_selection, name='ug_year_selection'),
-    path('courses/', views.course_overview, name='course_overview'),
-    path('students/', views.student_list, name='student_list'),
-    path('student/<int:student_id>/', views.student_detail, name='student_detail'),
+    path('pg-years/', views.pg_year_selection, name='pg_year_selection'),
+    path('analytics/ug-year/<int:year>/', views.course_overview_by_year, name='course_overview_by_year'),
+
 ] 

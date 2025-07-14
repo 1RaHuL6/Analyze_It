@@ -201,7 +201,7 @@
                 <div class="widget-large"style="cursor: pointer;">
                     <div class="widget-header">Undergraduate (UG)</div>
                     <div class="widget-content">
-                        <div class="widget-value">yet to upload</div>
+                        <div class="widget-value"> {{avg_ug_attendance}} % </div>
                         <div class="widget-label">Average Attendance</div>
                         <div class="widget-details">
                             <span>Students: {{ ug_student_count }}</span> • <span>Courses: {{ ug_course_count }}</span>
@@ -210,27 +210,29 @@
                 </div>
                </a> 
 
-                <div class="widget-large" onclick="showMessage('Navigate to PGT Course View')">
+                <div class="widget-large" >
+                    <a href="{% url 'analytics:pg_year_selection' %}" style="text-decoration: none; color: inherit;">
                     <div class="widget-header">Postgraduate (PGT)</div>
                     <div class="widget-content">
-                        <div class="widget-value">yet to upload</div>
+                        <div class="widget-value"> {{avg_pg_attendance}} % </div>
                         <div class="widget-label">Average Attendance</div>
                         <div class="widget-details">
-                            <span>Students: {{ pg_student_count}}</span> • <span>Courses: {{ pg_course_count }}</span>
+                            <span>Students: {{ pg_student_count}} </span> • <span>Courses: {{ pg_course_count }}</span>
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
 
             <!-- Second Row: Low Attendance Widgets -->
             <div class="dashboard-row">
-                <div class="widget-medium" onclick="showMessage('Navigate to UG Low Attendance Student List')">
-                    <div class="widget-value">yet to upload</div>
+                <div class="widget-medium" >
+                    <div class="widget-value"> {{low_attendance_ug_count}} </div>
                     <div class="widget-label">UG Students &lt;75% Attendance</div>
                 </div>
 
-                <div class="widget-medium" onclick="showMessage('Navigate to PGT Low Attendance Student List')">
-                    <div class="widget-value">yet to upload</div>
+                <div class="widget-medium" >
+                    <div class="widget-value"> {{low_attendance_pg_count}} </div>
                     <div class="widget-label">PGT Students &lt;75% Attendance</div>
                 </div>
             </div>

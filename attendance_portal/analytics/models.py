@@ -23,42 +23,44 @@ class Course(models.Model):
 class Enrollment(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    
+    total_assessments = models.IntegerField(null=True, blank=True)
+    total_attendance_percent = models.FloatField(null=True, blank=True)
+    total_attended = models.IntegerField(null=True, blank=True)
+    total_non_attended = models.IntegerField(null=True, blank=True)
+    total_non_submission = models.IntegerField(null=True, blank=True)
+    total_submitted = models.IntegerField(null=True, blank=True)
+    total_submitted_percent = models.FloatField(null=True, blank=True)
+    total_teaching_sessions = models.IntegerField(null=True, blank=True)
 
     class Meta:
         unique_together = ('student', 'course')  # prevent duplicate enrollments
 
     def __str__(self):
-        return f"{self.student.user_id} → {self.course.code} ({self.registration_status})"
+        return f"{self.student.user_id} → {self.course.code}"
 
 
 class Attendance(models.Model):
-    #enrollment = models.OneToOneField(Enrollment, on_delete=models.CASCADE)
-
     teaching_sessions = models.IntegerField(null=True, blank=True)
     total_attended = models.IntegerField(null=True, blank=True)
     non_attendance = models.IntegerField(null=True, blank=True)
     attendance_percent = models.FloatField(null=True, blank=True)
 
     def __str__(self):
-        return f"Attendance: {self.enrollment}"
+        return f"Attendance: {self.id}"
 
 
 class Assessment(models.Model):
-    #enrollment = models.OneToOneField(Enrollment, on_delete=models.CASCADE)
-
     total_assessments = models.IntegerField(null=True, blank=True)
     submitted = models.IntegerField(null=True, blank=True)
     non_submission = models.IntegerField(null=True, blank=True)
     submitted_percent = models.FloatField(null=True, blank=True)
 
     def __str__(self):
-        return f"Assessment: {self.enrollment}"
+        return f"Assessment: {self.id}"
 
 
 class CourseTotalStats(models.Model):
-    #enrollment = models.OneToOneField(Enrollment, on_delete=models.CASCADE)
-
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
     total_teaching_sessions = models.IntegerField(null=True, blank=True)
     total_attended = models.IntegerField(null=True, blank=True)
     total_non_attended = models.IntegerField(null=True, blank=True)
@@ -70,4 +72,7 @@ class CourseTotalStats(models.Model):
     total_submitted_percent = models.FloatField(null=True, blank=True)
 
     def __str__(self):
-        return f"TotalStats: {self.course.code}"
+        return f"TotalStats: {self.course.code if self.course else 'None'}"
+
+
+

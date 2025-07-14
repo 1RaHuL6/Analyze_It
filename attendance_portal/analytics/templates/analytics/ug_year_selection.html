@@ -1,32 +1,343 @@
-{% extends "analytics/base.html" %}
-{% block title %}UG Year Selection{% endblock %}
-{% block content %}
-<div class="level">
-    <div class="level-header">
-        <div class="level-number">1.99</div>
-        <div class="level-title">UG Year Selection Page</div>
+
+{% load custom_filter %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Attendance Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1a1a2e;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Back button styles */
+        .back-button {
+            background: #e94560;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+           .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+            }
+
+            .status-good {
+            background-color: #2ecc71;
+            color: #fff;
+            }
+
+            .status-warning {
+            background-color: #f1c40f;
+            color: #000;
+            }
+
+            .status-danger {
+            background-color: #e74c3c;
+            color: #fff;
+            }
+
+
+        .back-button:hover {
+            background: #ff2e63;
+            transform: translateY(-2px);
+        }
+
+        /* Breadcrumb styles */
+        .breadcrumb {
+            font-size: 0.9em;
+            color: #bbb;
+            margin-bottom: 25px;
+            user-select: none;
+        }
+        .breadcrumb-link,
+            .breadcrumb-link:visited {
+            color: #ff2e63;       /* Keep same color for normal and visited */
+            text-decoration: underline;
+            cursor: pointer;
+            }
+
+            .breadcrumb-link:hover {
+            color: #e94560;
+            text-decoration: none;
+            }
+
+        /* Level card styling */
+        .level {
+            background: #0f0f2d;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-left: 6px solid #e94560;
+            transition: transform 0.3s ease;
+        }
+
+        .level:hover {
+            transform: translateY(-5px);
+        }
+
+        .level-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .level-number {
+            font-size: 1.7em;
+            font-weight: 700;
+            color: #e94560;
+        }
+
+        .level-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Table styles */
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            color: #eee;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .course-table thead {
+            background: #16213e;
+            color: #ff2e63;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .course-table th, 
+        .course-table td {
+            padding: 12px 15px;
+        }
+
+        .course-table tbody tr {
+            background: #1a1a2e;
+            border-bottom: 1px solid #2c2c54;
+            transition: background 0.3s ease;
+        }
+
+        .course-table tbody tr:hover {
+            background: #2c2c54;
+        }
+
+        /* Status badge styles */
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.9em;
+            display: inline-block;
+            user-select: none;
+        }
+
+        .status-good {
+            background-color: #1abc9c;
+            color: #0e4d40;
+        }
+
+        .status-warning {
+            background-color: #f1c40f;
+            color: #665c00;
+        }
+
+        .status-danger {
+            background-color: #e94560;
+            color: #4d0013;
+        }
+
+        @media (max-width: 768px) {
+            .level-header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+
+            .course-table thead {
+                display: none; /* Hide headers on small screens */
+            }
+
+            .course-table, 
+            .course-table tbody, 
+            .course-table tr, 
+            .course-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .course-table tr {
+                margin-bottom: 15px;
+                border-bottom: 2px solid #e94560;
+                background: #0f0f2d;
+            }
+
+            .course-table td {
+                padding-left: 50%;
+                position: relative;
+                text-align: left;
+            }
+
+            .course-table td::before {
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: 700;
+                color: #ff2e63;
+                content: attr(data-label);
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Back button -->
+        <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard</a>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt; UG Year Selection
+        </div>
+
+        <!-- Level card -->
+        <div class="level">
+            <div class="level-header">
+                <div class="level-title">UG Year Selection </div>
+            </div>
+            <table class="course-table">
+<table class="course-table">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Year Description</th>
+      <th>Students</th>
+      <th>Students &lt;75%</th>
+      <th>Avg Attendance</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for year in year_data %}
+    <tr onclick="window.location.href='{% url 'analytics:course_overview_by_year' year.year %}'" style="cursor: pointer;">
+      <td>{{ year.year }}</td>
+      <td>{{ year.description }}</td>
+      <td>{{ year.student_count }}</td>
+      <td>{{ year.low_attendance_count }}</td>
+      <td>{{ year.avg_attendance }}%</td>
+      <td>
+        <span class="status-badge 
+          {% if year.status == 'Excellent' %}status-good
+          {% elif year.status == 'Good' %}status-good
+          {% elif year.status == 'Monitor' %}status-warning
+          {% else %}status-danger{% endif %}">
+          {{ year.status }}
+        </span>
+      </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="6">No data found.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+        </div>
     </div>
-    <div class="breadcrumb">Dashboard &gt; UG Year Selection</div>
-    <table class="course-table">
-        <thead>
-            <tr>
-                <th>Year</th>
-                <th>Year Description</th>
-                <th>Students</th>
-                <th>Avg Attendance</th>
-                <th>Students &lt;75%</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>0</td><td>Foundation Year</td><td>156</td><td>91%</td><td>8 (5%)</td><td><span class="status-badge status-good">Excellent</span></td></tr>
-            <tr><td>1</td><td>First Year</td><td>142</td><td>87%</td><td>12 (8%)</td><td><span class="status-badge status-good">Good</span></td></tr>
-            <tr><td>2</td><td>Second Year</td><td>138</td><td>84%</td><td>18 (13%)</td><td><span class="status-badge status-warning">Monitor</span></td></tr>
-            <tr><td>3</td><td>Third Year (Final)</td><td>125</td><td>79%</td><td>25 (20%)</td><td><span class="status-badge status-warning">Monitor</span></td></tr>
-            <tr><td>4</td><td>Fourth Year (Honors)</td><td>89</td><td>88%</td><td>7 (8%)</td><td><span class="status-badge status-good">Good</span></td></tr>
-            <tr><td>5</td><td>Fifth Year (Extended)</td><td>12</td><td>72%</td><td>6 (50%)</td><td><span class="status-badge status-danger">Critical</span></td></tr>
-        </tbody>
-    </table>
-    <div class="clickable-note"><strong>Actions:</strong> Click any year row to view courses for that specific year</div>
+
+
+    
+<!-- Chart Container -->
+<div style="margin-top: 40px;">
+    <h2 style="color: #fff; text-align: center;">Average Attendance Per Year</h2>
+    <canvas id="attendanceChart" height="120"></canvas>
 </div>
-{% endblock %} 
+
+
+
+<script>
+    const yearData = {{ year_data|safe }};
+    const yearLabels = yearData.map(item => `Year ${item.year}`);
+    const avgAttendance = yearData.map(item => item.avg_attendance);
+
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    const attendanceChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: yearLabels,
+            datasets: [{
+                label: 'Average Attendance (%)',
+                data: avgAttendance,
+                backgroundColor: '#e94560',
+                borderRadius: 8,
+                barThickness: 40,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: context => context.parsed.y + '%'
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        color: '#ccc',
+                        callback: value => value + '%'
+                    },
+                    grid: { color: '#333' }
+                },
+                x: {
+                    ticks: { color: '#ccc' },
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>
