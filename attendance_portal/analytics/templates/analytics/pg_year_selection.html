@@ -242,7 +242,7 @@
         <!-- Level card -->
         <div class="level">
             <div class="level-header">
-                <div class="level-title">UG Year Selection </div>
+                <div class="level-title">PGT Year Selection </div>
             </div>
             <table class="course-table">
 <table class="course-table">
@@ -258,7 +258,7 @@
   </thead>
   <tbody>
     {% for year in year_data %}
-    <tr>
+    <tr onclick="window.location.href='{% url 'analytics:course_overview_by_year_pg' year.year %}'" style="cursor: pointer;">
       <td>{{ year.year }}</td>
       <td>{{ year.description }}</td>
       <td>{{ year.student_count }}</td>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>UG Year {{ year }} Courses</title>
+    <title>{{ course.title }} - Student List</title>
     <style>
         * {
             margin: 0;
@@ -11,7 +11,7 @@
             font-family: 'Poppins', sans-serif;
         }
         body {
-            background: #1a1a2e;
+            background: #1a1a2e; 
             color: #ffffff;
             min-height: 100vh;
             padding: 20px;
@@ -103,12 +103,10 @@
             background-color: #e94560;
             color: #4d0013;
         }
-        @media (max-width: 768px)
-        {
+        @media (max-width: 768px) {
             .course-table thead {
                 display: none;
             }
-
             .course-table, 
             .course-table tbody, 
             .course-table tr, 
@@ -116,19 +114,16 @@
                 display: block;
                 width: 100%;
             }
-
             .course-table tr {
                 margin-bottom: 15px;
                 border-bottom: 2px solid #e94560;
                 background: #0f0f2d;
             }
-
             .course-table td {
                 padding-left: 50%;
                 position: relative;
                 text-align: left;
             }
-
             .course-table td::before {
                 position: absolute;
                 top: 12px;
@@ -144,56 +139,52 @@
     </style>
 </head>
 <body>
-
 <div class="container">
 
-    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a> 
+    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
 
     <div class="breadcrumb">
         <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
         <a href="{% url 'analytics:ug_year_selection' %}" class="breadcrumb-link">UG Year Selection</a> &gt;
-        <span>Year {{ year }} Courses</span>
+        <a href="{{ back_url }}" class="breadcrumb-link">UG Course Selection</a> &gt;
+        <span>{{ course.title }}</span>
     </div>
 
-    <h3>Courses in UG Year {{ year }} </h3>
+    <h3>Students for {{ course.code }} - {{ course.title }} (Year {{ year }})</h3>
 
     <table class="course-table">
         <thead>
             <tr>
-                <th>Course Code</th>
-                <th>Course Title</th>
-                <th>Students</th>
-                <th>Students &lt;75%</th>
-                <th>Avg Attendance</th>
+                <th>Student ID</th>
+                <th>Attendance %</th>
                 <th>Status</th>
             </tr>
         </thead>
         <tbody>
-            {% for course in courses %}
-            <tr onclick="window.location.href='{% url 'analytics:course_students' course.code year %}'" style="cursor: pointer;">
-                <td data-label="Course Code">{{ course.code }}</td>
-                <td data-label="Course Title">{{ course.title }}</td>
-                <td data-label="Students">{{ course.student_count }}</td>
-                <td data-label="Students <75%">{{ course.low_attendance_display }}</td>
-                <td data-label="Avg Attendance">{{ course.avg_attendance }}%</td>
+            {% for student in students %}
+            <tr onclick="window.location.href='{% url 'analytics:student_attendance_details' course.code year student.user_id %}'" style="cursor: pointer;">
+                <td data-label="Student ID">{{ student.user_id }}</td>
+                <td data-label="Attendance">{{ student.attendance }} %</td>
                 <td data-label="Status">
-                    <span class="status-badge
-                        {% if course.status == 'Good' %}status-good
-                        {% elif course.status == 'Monitor' %}status-warning
-                        {% else %}status-danger{% endif %}">
-                        {{ course.status }}
+                    <span class="status-badge 
+                        {% if student.attendance != 'N/A' and student.attendance >= 75 %}status-good
+                        {% elif student.attendance != 'N/A' and student.attendance >= 50 %}status-warning
+                        {% elif student.attendance != 'N/A' %}status-danger{% endif %}">
+                        {% if student.attendance == 'N/A' %}N/A
+                        {% elif student.attendance >= 75 %}Good
+                        {% elif student.attendance >= 50 %}Monitor
+                        {% else %}At Risk{% endif %}
                     </span>
                 </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="6">No courses found for this year.</td>
+                <td colspan="4">No students found for this course and year</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
 </div>
-
 </body>
 </html>

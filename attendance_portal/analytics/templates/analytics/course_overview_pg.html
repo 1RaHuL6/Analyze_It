@@ -147,15 +147,15 @@
 
 <div class="container">
 
-    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a> 
+    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
 
     <div class="breadcrumb">
         <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
-        <a href="{% url 'analytics:ug_year_selection' %}" class="breadcrumb-link">UG Year Selection</a> &gt;
+        <a href="{% url 'analytics:pg_year_selection' %}" class="breadcrumb-link">PGT Year Selection</a> &gt;
         <span>Year {{ year }} Courses</span>
     </div>
 
-    <h3>Courses in UG Year {{ year }} </h3>
+    <h3> Courses in PGT Year {{ year }} </h3>
 
     <table class="course-table">
         <thead>
@@ -170,7 +170,7 @@
         </thead>
         <tbody>
             {% for course in courses %}
-            <tr onclick="window.location.href='{% url 'analytics:course_students' course.code year %}'" style="cursor: pointer;">
+            <tr onclick="window.location.href='{% url 'analytics:course_students_pg' course.code year %}'" style="cursor: pointer;">
                 <td data-label="Course Code">{{ course.code }}</td>
                 <td data-label="Course Title">{{ course.title }}</td>
                 <td data-label="Students">{{ course.student_count }}</td>
