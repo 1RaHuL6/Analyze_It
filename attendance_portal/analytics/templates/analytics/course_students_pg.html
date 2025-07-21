@@ -162,7 +162,7 @@
         </thead>
         <tbody>
             {% for student in students %}
-            <tr onclick="window.location.href='{% url 'analytics:student_attendance_details' course.code year student.user_id %}'" style="cursor: pointer;">
+            <tr onclick="window.location.href='{% url 'analytics:student_attendance_details_pg' course.code year student.user_id %}'" style="cursor: pointer;">
                 <td data-label="Student ID">{{ student.user_id }}</td>
                 <td data-label="Attendance">{{ student.attendance }} %</td>
                 <td data-label="Status">

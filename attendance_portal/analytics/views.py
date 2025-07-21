@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Avg, Count, F
-from .models import Student, Course, Attendance, Assessment, CourseTotalStats, Enrollment
+from .models import Student, Course, Attendance, Assessment, CourseTotalStats, Enrollment, AttendanceSnapshot
 from django.db.models.functions import TruncDate
 from django.contrib.auth.decorators import login_required
 import json
@@ -287,6 +287,18 @@ def course_student_list_pg(request, course_code, year):
     }
     return render(request, 'analytics/course_students_pg.html', context)
 
+
+
+
+from collections import OrderedDict
+
+# Your snapshot labels
+SNAPSHOT_LABELS = OrderedDict({
+    "2017-09-25": "W1",
+    "2017-10-16": "W2",
+    "2017-11-06": "W3",
+    "2017-11-27": "W4",
+})
 #level 5 UG
 @login_required   
 def student_attendance_details(request, course_code, year, student_id):
@@ -294,12 +306,26 @@ def student_attendance_details(request, course_code, year, student_id):
     student = get_object_or_404(Student, user_id=student_id, year_of_course=year)
     enrollment = get_object_or_404(Enrollment, course=course, student=student)
 
-    # course-level statistics
     course_stats = CourseTotalStats.objects.filter(course=course).first()
     course_average = course_stats.total_attendance_percent if course_stats and course_stats.total_attendance_percent is not None else 0
 
-    # student data 
-    student_attendance = enrollment.total_attendance_percent or 0
+    # Get snapshots and map to week labels
+    snapshots = AttendanceSnapshot.objects.filter(enrollment=enrollment).order_by('snapshot_date')
+
+    week_labels = []
+    attendance_values = []
+
+    for snap in snapshots:
+        label = SNAPSHOT_LABELS.get(snap.snapshot_date.strftime("%Y-%m-%d"))
+        if label:
+            week_labels.append(label)
+            attendance_values.append(snap.attendance_percent or 0)
+    
+    # Calculate dynamic student attendance as average of snapshot values
+    student_attendance = 0
+    if attendance_values:
+        student_attendance = round(sum(attendance_values) / len(attendance_values), 2)
+    
     attended_sessions = enrollment.total_attended or 0
     missed_sessions = enrollment.total_non_attended or 0
     difference = round(student_attendance - course_average, 2)
@@ -309,28 +335,42 @@ def student_attendance_details(request, course_code, year, student_id):
         'student': student,
         'enrollment': enrollment,
         'year': year,
-        'student_attendance': student_attendance,
+        'student_attendance': student_attendance,  # Now using dynamically calculated value
         'course_average': course_average,
         'difference': difference,
         'attended_sessions': attended_sessions,
         'missed_sessions': missed_sessions,
+        'snapshots': snapshots,
+        'week_labels': week_labels,
+        'attendance_values': attendance_values,
     }
     return render(request, 'analytics/student_detail.html', context)
-
 @login_required   
 def student_attendance_details_pg(request, course_code, year, student_id):
     course = get_object_or_404(Course, code=course_code)
     student = get_object_or_404(Student, user_id=student_id, year_of_course=year)
     enrollment = get_object_or_404(Enrollment, course=course, student=student)
 
-    # dynamically calculate average attendance for the course and year
-    course_average = Enrollment.objects.filter(
-        course=course,
-        student__year_of_course=year
-    ).aggregate(avg_attendance=Avg('total_attendance_percent'))['avg_attendance'] or 0
+    course_stats = CourseTotalStats.objects.filter(course=course).first()
+    course_average = course_stats.total_attendance_percent if course_stats and course_stats.total_attendance_percent is not None else 0
 
-    # student data 
-    student_attendance = enrollment.total_attendance_percent or 0
+    # Get snapshots and map to week labels
+    snapshots = AttendanceSnapshot.objects.filter(enrollment=enrollment).order_by('snapshot_date')
+
+    week_labels = []
+    attendance_values = []
+
+    for snap in snapshots:
+        label = SNAPSHOT_LABELS.get(snap.snapshot_date.strftime("%Y-%m-%d"))
+        if label:
+            week_labels.append(label)
+            attendance_values.append(snap.attendance_percent or 0)
+    
+    # Calculate dynamic student attendance as average of snapshot values
+    student_attendance = 0
+    if attendance_values:
+        student_attendance = round(sum(attendance_values) / len(attendance_values), 2)
+    
     attended_sessions = enrollment.total_attended or 0
     missed_sessions = enrollment.total_non_attended or 0
     difference = round(student_attendance - course_average, 2)
@@ -340,11 +380,14 @@ def student_attendance_details_pg(request, course_code, year, student_id):
         'student': student,
         'enrollment': enrollment,
         'year': year,
-        'student_attendance': student_attendance,
-        'course_average': round(course_average, 2),
+        'student_attendance': student_attendance,  # Now using dynamically calculated value
+        'course_average': course_average,
         'difference': difference,
         'attended_sessions': attended_sessions,
         'missed_sessions': missed_sessions,
+        'snapshots': snapshots,
+        'week_labels': week_labels,
+        'attendance_values': attendance_values,
     }
     return render(request, 'analytics/student_detail_pg.html', context)
 
