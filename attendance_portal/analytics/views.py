@@ -83,7 +83,7 @@ def ug_year_selection(request):
 
         student_count = students.count()
 
-        # Extract non-null attendance values
+        
         attendance_values = enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
         avg_attendance = sum(attendance_values) / len(attendance_values) if attendance_values else 0
 
@@ -98,6 +98,7 @@ def ug_year_selection(request):
             'low_attendance_count': low_attendance_count,
             'status': get_status(avg_attendance),
         })
+    
 
     context = {
         'year_data': year_data,
@@ -175,10 +176,11 @@ def course_overview_by_year(request, year):
             'low_attendance_display': f"{low_attendance_count} ({round((low_attendance_count / student_count) * 100, 1)}%)" if student_count else "0",
             'status': get_status(avg_attendance)
         })
+        course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
 
     return render(request, "analytics/course_overview.html", {
         'year': year,
-        'courses': course_data,
+        'courses': course_data_sorted,
     })
 
 # level 3 PG
@@ -218,10 +220,12 @@ def course_overview_by_year_pg(request, year):
             'low_attendance_display': f"{low_attendance_count} ({round((low_attendance_count / student_count) * 100, 1)}%)" if student_count else "0",
             'status': get_status(avg_attendance)
         })
+        course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
+
 
     return render(request, "analytics/course_overview_pg.html", {
         'year': year,
-        'courses': course_data,
+        'courses': course_data_sorted,
     })
 
 #level 4 UG
@@ -242,14 +246,16 @@ def course_student_list(request, course_code, year):
         }
         for e in enrollments
     ]
+    student_data_sorted = sorted(student_data, key=lambda x: x['attendance'])
     
     back_url = request.META.get('HTTP_REFERER', '/')
     context = {
         'course': course,
-        'students': student_data,
+        'students': student_data_sorted,
         'back_url': back_url,
         'year': year  
     }
+    
     return render(request, 'analytics/course_students.html', context)
 
 #level 4 PGT
@@ -270,11 +276,12 @@ def course_student_list_pg(request, course_code, year):
         }
         for e in enrollments
     ]
+    student_data_sorted = sorted(student_data, key=lambda x: x['attendance'])
     
     back_url = request.META.get('HTTP_REFERER', '/')
     context = {
         'course': course,
-        'students': student_data,
+        'students': student_data_sorted,
         'back_url': back_url,
         'year': year  # Pass year to template
     }
@@ -316,9 +323,11 @@ def student_attendance_details_pg(request, course_code, year, student_id):
     student = get_object_or_404(Student, user_id=student_id, year_of_course=year)
     enrollment = get_object_or_404(Enrollment, course=course, student=student)
 
-    # course-level statistics
-    course_stats = CourseTotalStats.objects.filter(course=course).first()
-    course_average = course_stats.total_attendance_percent if course_stats and course_stats.total_attendance_percent is not None else 0
+    # dynamically calculate average attendance for the course and year
+    course_average = Enrollment.objects.filter(
+        course=course,
+        student__year_of_course=year
+    ).aggregate(avg_attendance=Avg('total_attendance_percent'))['avg_attendance'] or 0
 
     # student data 
     student_attendance = enrollment.total_attendance_percent or 0
@@ -332,12 +341,14 @@ def student_attendance_details_pg(request, course_code, year, student_id):
         'enrollment': enrollment,
         'year': year,
         'student_attendance': student_attendance,
-        'course_average': course_average,
+        'course_average': round(course_average, 2),
         'difference': difference,
         'attended_sessions': attended_sessions,
         'missed_sessions': missed_sessions,
     }
-    return render(request, 'analytics/student_detail.html', context)
+    return render(request, 'analytics/student_detail_pg.html', context)
+
+
 
 
 

@@ -75,4 +75,19 @@ class CourseTotalStats(models.Model):
         return f"TotalStats: {self.course.code if self.course else 'None'}"
 
 
+class AttendanceSnapshot(models.Model):
+    enrollment = models.ForeignKey('Enrollment', on_delete=models.CASCADE)
+    snapshot_date = models.DateField()
+    teaching_sessions = models.IntegerField(null=True, blank=True)
+    attended = models.IntegerField(null=True, blank=True)
+    non_attended = models.IntegerField(null=True, blank=True)
+    attendance_percent = models.FloatField(null=True, blank=True)
+    assessments_total = models.IntegerField(null=True, blank=True)
+    assessments_submitted = models.IntegerField(null=True, blank=True)
+    assessments_non_submitted = models.IntegerField(null=True, blank=True)
+    assessment_submitted_percent = models.FloatField(null=True, blank=True)
+    last_attendance_datetime = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.enrollment.student.user_id} @ {self.snapshot_date}"  
 
