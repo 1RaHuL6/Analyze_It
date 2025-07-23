@@ -153,14 +153,19 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" style="position: relative;">
+    <!-- Pie Chart for Status Counts -->
+    <div style="position: absolute; top: 0; right: 0; width: 220px; height: 220px; z-index: 10; background: #0f0f2d; border-radius: 15px; box-shadow: 0 4px 16px rgba(0,0,0,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h4 style="color: #fff; font-size: 1em; margin-bottom: 8px;">Status Distribution</h4>
+        <canvas id="statusPieChart" width="180" height="180"></canvas>
+    </div>
 
     <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
 
     <div class="breadcrumb">
         <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
         <a href="{% url 'analytics:ug_year_selection' %}" class="breadcrumb-link">UG Year Selection</a> &gt;
-        <a href="{{ back_url }}" class="breadcrumb-link">UG Course Selection</a> &gt;
+        <a href="{% url 'analytics:course_overview_by_year' year %}" class="breadcrumb-link">Year {{ year }} Courses</a> &gt;
         <span>{{ course.title }}</span>
     </div>
 
@@ -226,6 +231,18 @@
         if (attendance >= 75) return 'Good';
         if (attendance >= 50) return 'Monitor';
         return 'At Risk';
+    }
+
+    // Pie chart data calculation
+    function getStatusCounts(data) {
+        let good = 0, monitor = 0, atRisk = 0;
+        data.forEach(s => {
+            const status = getStatus(s.attendance);
+            if (status === 'Good') good++;
+            else if (status === 'Monitor') monitor++;
+            else if (status === 'At Risk') atRisk++;
+        });
+        return [good, monitor, atRisk];
     }
 
     function getFilteredStudents(status) {
@@ -295,6 +312,38 @@
                     x: {
                         ticks: { color: '#ccc' },
                         grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Pie chart for status counts
+        const statusCounts = getStatusCounts(studentData);
+        const pieCtx = document.getElementById('statusPieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Good', 'Monitor', 'At Risk'],
+                datasets: [{
+                    data: statusCounts,
+                    backgroundColor: ['#1abc9c', '#f1c40f', '#e94560'],
+                    borderColor: '#222',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: { color: '#fff', font: { size: 13 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + ' students';
+                            }
+                        }
                     }
                 }
             }

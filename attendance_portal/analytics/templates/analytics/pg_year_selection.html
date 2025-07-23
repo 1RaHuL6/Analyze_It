@@ -250,6 +250,7 @@
     <tr>
       <th>Year</th>
       <th>Year Description</th>
+      <th>Courses</th>
       <th>Students</th>
       <th>Students &lt;75%</th>
       <th>Avg Attendance</th>
@@ -261,6 +262,7 @@
     <tr onclick="window.location.href='{% url 'analytics:course_overview_by_year_pg' year.year %}'" style="cursor: pointer;">
       <td>{{ year.year }}</td>
       <td>{{ year.description }}</td>
+      <td>{{ year.course_count }}</td>
       <td>{{ year.student_count }}</td>
       <td>{{ year.low_attendance_count }}</td>
       <td>{{ year.avg_attendance }}%</td>
@@ -276,7 +278,7 @@
       </td>
     </tr>
     {% empty %}
-    <tr><td colspan="6">No data found.</td></tr>
+    <tr><td colspan="7">No data found.</td></tr>
     {% endfor %}
   </tbody>
 </table>
