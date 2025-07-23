@@ -157,6 +157,17 @@
 
     <h3> Courses in PGT Year {{ year }} </h3>
 
+    <!-- Filter Dropdown -->
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <label for="statusFilter" style="font-weight: 600; color: #fff;">Filter by Status:</label>
+        <select id="statusFilter" style="padding: 6px 12px; border-radius: 5px; border: none; font-size: 1em;">
+            <option value="All">All</option>
+            <option value="Good">Good</option>
+            <option value="Monitor">Monitor</option>
+            <option value="At Risk">At Risk</option>
+        </select>
+    </div>
+
     <table class="course-table">
         <thead>
             <tr>
@@ -168,9 +179,9 @@
                 <th>Status</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="courseTableBody">
             {% for course in courses %}
-            <tr onclick="window.location.href='{% url 'analytics:course_students_pg' course.code year %}'" style="cursor: pointer;">
+            <tr data-status="{{ course.status }}" onclick="window.location.href='{% url 'analytics:course_students_pg' course.code year %}'" style="cursor: pointer;">
                 <td data-label="Course Code">{{ course.code }}</td>
                 <td data-label="Course Title">{{ course.title }}</td>
                 <td data-label="Students">{{ course.student_count }}</td>
@@ -192,6 +203,99 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <!-- Chart container -->
+    <div class="chart-container" style="background: #0f0f2d; border-radius: 15px; padding: 25px; margin: 30px auto; max-width: 1200px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-left: 6px solid #e94560; height: 400px; position: relative;">
+        <div style="font-size: 1.3em; font-weight: 600; color: #fff; margin-bottom: 20px; text-align: center;">Average Attendance Per Course</div>
+        <canvas id="attendanceChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Get the course data passed from the view
+        const courseData = {{ courses|safe }};
+
+        function getFilteredCourses(status) {
+            if (status === 'All') return courseData;
+            if (status === 'At Risk') return courseData.filter(c => c.status === 'At Risk');
+            return courseData.filter(c => c.status === status);
+        }
+
+        function updateTable(status) {
+            const tbody = document.getElementById('courseTableBody');
+            const rows = tbody.querySelectorAll('tr[data-status]');
+            rows.forEach(row => {
+                if (status === 'All' || row.getAttribute('data-status') === status) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Chart.js setup
+        let attendanceChart;
+        function updateChart(status) {
+            const filtered = getFilteredCourses(status);
+            const courseLabels = filtered.map(item => item.code);
+            const avgAttendance = filtered.map(item => item.avg_attendance);
+            attendanceChart.data.labels = courseLabels;
+            attendanceChart.data.datasets[0].data = avgAttendance;
+            attendanceChart.update();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial chart render
+            const ctx = document.getElementById('attendanceChart').getContext('2d');
+            attendanceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: courseData.map(item => item.code),
+                    datasets: [{
+                        label: 'Average Attendance (%)',
+                        data: courseData.map(item => item.avg_attendance),
+                        backgroundColor: '#e94560',
+                        borderRadius: 8,
+                        barThickness: 40,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: context => context.parsed.y + '%'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: '#ccc',
+                                callback: value => value + '%'
+                            },
+                            grid: { color: '#333' }
+                        },
+                        x: {
+                            ticks: { color: '#ccc' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Filter event
+            document.getElementById('statusFilter').addEventListener('change', function() {
+                const status = this.value;
+                updateTable(status);
+                updateChart(status);
+            });
+        });
+    </script>
 
 </div>
 

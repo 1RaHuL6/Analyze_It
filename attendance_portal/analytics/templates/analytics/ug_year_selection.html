@@ -224,7 +224,7 @@
             }
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 
 </head>
 <body>
@@ -249,6 +249,7 @@
     <tr>
       <th>Year</th>
       <th>Year Description</th>
+      <th>Courses</th>
       <th>Students</th>
       <th>Students &lt;75%</th>
       <th>Avg Attendance</th>
@@ -260,6 +261,7 @@
     <tr onclick="window.location.href='{% url 'analytics:course_overview_by_year' year.year %}'" style="cursor: pointer;">
       <td>{{ year.year }}</td>
       <td>{{ year.description }}</td>
+      <td>{{year.course_count}}</td>
       <td>{{ year.student_count }}</td>
       <td>{{ year.low_attendance_count }}</td>
       <td>{{ year.avg_attendance }}%</td>
@@ -279,63 +281,65 @@
   </tbody>
 </table>
         </div>
-    </div>
-
-
     
-<!-- Chart Container -->
-<div style="margin-top: 40px;">
-    <h2 style="color: #fff; text-align: center;">Average Attendance Per Year</h2>
-    <canvas id="attendanceChart" height="120"></canvas>
+
+<div class="chart-container" style="margin-top: 40px;">
+    <h2 class="chart-title">Weekly Attendance by Year Group</h2>
+    <div id="radarContainer" style="height: 400px; max-width: 700px; margin: 0 auto;">
+        <canvas id="attendanceRadar" style="width: 100%; height: 100%; background: #0f0f2d; border-radius: 15px;"></canvas>
+    </div>
 </div>
 
+<!-- Safely pass radar_data to JS -->
+{{ radar_data.labels|json_script:"radar-labels" }}
+{{ radar_data.datasets|json_script:"radar-datasets" }}
 
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    const yearData = {{ year_data|safe }};
-    const yearLabels = yearData.map(item => `Year ${item.year}`);
-    const avgAttendance = yearData.map(item => item.avg_attendance);
-
-    const ctx = document.getElementById('attendanceChart').getContext('2d');
-    const attendanceChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: yearLabels,
-            datasets: [{
-                label: 'Average Attendance (%)',
-                data: avgAttendance,
-                backgroundColor: '#e94560',
-                borderRadius: 8,
-                barThickness: 40,
-            }]
-        },
+document.addEventListener('DOMContentLoaded', function() {
+    const radarCtx = document.getElementById('attendanceRadar');
+    const labels = JSON.parse(document.getElementById('radar-labels').textContent);
+    const datasets = JSON.parse(document.getElementById('radar-datasets').textContent);
+    const radarData = { labels: labels, datasets: datasets };
+    new Chart(radarCtx, {
+        type: 'radar',
+        data: radarData,
         options: {
             responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: {
+                    angleLines: { display: true },
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    ticks: {
+                        stepSize: 20,
+                        color: '#ccc',
+                        backdropColor: 'transparent'
+                    },
+                    grid: { color: '#333' },
+                    pointLabels: { color: '#ccc' }
+                }
+            },
             plugins: {
-                legend: { display: false },
+                legend: {
+                    position: 'right',
+                    labels: { color: '#fff' }
+                },
                 tooltip: {
                     callbacks: {
-                        label: context => context.parsed.y + '%'
+                        label: context => `${context.dataset.label}: ${context.raw}%`
                     }
                 }
             },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 100,
-                    ticks: {
-                        color: '#ccc',
-                        callback: value => value + '%'
-                    },
-                    grid: { color: '#333' }
-                },
-                x: {
-                    ticks: { color: '#ccc' },
-                    grid: { display: false }
-                }
+            elements: {
+                line: { tension: 0.1 }
             }
         }
     });
+});
 </script>
 
 

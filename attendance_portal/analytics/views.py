@@ -69,10 +69,121 @@ def get_status(avg_attendance):
         return "Monitor"
     else:
         return "Critical"
-  
-# level 2 UG    
+    
+def get_year_color(year):
+    """Return RGB color string for each year"""
+    colors = [
+        '255, 99, 132',    # Year 0 - Red
+        '54, 162, 235',     # Year 1 - Blue
+        '255, 206, 86',     # Year 2 - Yellow
+        '75, 192, 192',     # Year 3 - Teal
+        '153, 102, 255',    # Year 4 - Purple
+        '255, 159, 64'      # Year 5 - Orange
+    ]
+    return colors[year]    
+    
 @login_required
 def ug_year_selection(request):
+    year_data = []
+    
+   
+    SNAPSHOT_LABELS = OrderedDict({
+        "2017-09-25": "W1",
+        "2017-10-16": "W2",
+        "2017-11-06": "W3",
+        "2017-11-27": "W4",
+    })
+
+    for year in range(6):  # 0 to 5 years
+        students = Student.objects.filter(level_of_study='UG', year_of_course=year)
+        student_ids = students.values_list('id', flat=True)
+        enrollments = Enrollment.objects.filter(student_id__in=student_ids)
+        enrollment_ids = enrollments.values_list('id', flat=True)
+
+        student_count = students.count()
+        course_count = enrollments.values('course').distinct().count()
+
+       
+        attendance_values = enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
+        avg_attendance = sum(attendance_values) / len(attendance_values) if attendance_values else 0
+        low_attendance_count = enrollments.filter(total_attendance_percent__lt=75).count()
+
+        
+        weekly_attendance = {}
+        weekly_values = {label: [] for label in SNAPSHOT_LABELS.values()}  
+        
+        snapshots = AttendanceSnapshot.objects.filter(
+            enrollment_id__in=enrollment_ids,
+            snapshot_date__in=SNAPSHOT_LABELS.keys()
+        ).exclude(attendance_percent__isnull=True)
+        
+        
+        for snap in snapshots:
+            date_str = snap.snapshot_date.strftime("%Y-%m-%d")
+            if date_str in SNAPSHOT_LABELS:
+                week_label = SNAPSHOT_LABELS[date_str]
+                weekly_values[week_label].append(snap.attendance_percent)
+        
+        
+        for week_label, values in weekly_values.items():
+            weekly_avg = round(sum(values) / len(values), 2) if values else 0
+            weekly_attendance[week_label] = weekly_avg
+            
+    
+
+
+        year_data.append({
+            'year': year,
+            'description': YEAR_DESCRIPTIONS.get(year, f"Year {year}"),
+            'course_count': course_count,
+            'student_count': student_count,
+            'avg_attendance': round(avg_attendance, 2),
+            'low_attendance_count': low_attendance_count,
+            'status': get_status(avg_attendance),
+            'weekly_attendance': weekly_attendance,
+            'week_labels': list(SNAPSHOT_LABELS.values()),  
+            'attendance_values': [weekly_attendance.get(label, 0) for label in SNAPSHOT_LABELS.values()],
+        })
+    
+    # --- Build new radar_data: years on axes, weeks as datasets ---
+    years = [y['year'] for y in year_data]
+    week_labels = list(SNAPSHOT_LABELS.values())
+
+    # For each week, collect attendance for all years
+    week_to_year_attendance = {week: [] for week in week_labels}
+    for week in week_labels:
+        for y in year_data:
+            week_to_year_attendance[week].append(y['weekly_attendance'].get(week, 0))
+
+    radar_data = {
+        'labels': years,  # years on axes
+        'datasets': []
+    }
+    for i, week in enumerate(week_labels):
+        rgb = get_year_color(i)  # Use color function for weeks
+        dataset = {
+            'label': week,
+            'data': week_to_year_attendance[week],
+            'borderColor': f"rgb({rgb})",
+            'backgroundColor': f"rgba({rgb}, 0.2)",
+            'pointBackgroundColor': f"rgb({rgb})",
+            'pointRadius': 4,
+            'borderWidth': 2
+        }
+        radar_data['datasets'].append(dataset)
+
+    context = {
+        'year_data': year_data,
+        'radar_data': radar_data  
+    }
+    return render(request, 'analytics/ug_year_selection.html', context)
+
+
+
+
+# level 2 UG    
+@login_required
+def ug_year_selection_1(request):
     year_data = []
 
     for year in range(6):  # 0 to 5 years, as number of years will remain same
@@ -82,6 +193,7 @@ def ug_year_selection(request):
         enrollments = Enrollment.objects.filter(student_id__in=student_ids)
 
         student_count = students.count()
+        course_count = enrollments.values('course').distinct().count()
 
         
         attendance_values = enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
@@ -93,13 +205,14 @@ def ug_year_selection(request):
         year_data.append({
             'year': year,
             'description': YEAR_DESCRIPTIONS.get(year, f"Year {year}"),
+            'course_count': course_count,
             'student_count': student_count,
             'avg_attendance': round(avg_attendance, 2),
             'low_attendance_count': low_attendance_count,
             'status': get_status(avg_attendance),
         })
+           
     
-
     context = {
         'year_data': year_data,
     }
@@ -110,32 +223,78 @@ def ug_year_selection(request):
 def pg_year_selection(request):
     year_data = []
 
-    for year in range(1,3):  # 1 to 2 years, as number of years will remain same
+    SNAPSHOT_LABELS = OrderedDict({
+        "2017-09-25": "W1",
+        "2017-10-16": "W2",
+        "2017-11-06": "W3",
+        "2017-11-27": "W4",
+    })
+
+    for year in range(1, 3):  # 1 to 2 years
         students = Student.objects.filter(level_of_study='PGT', year_of_course=year)
         student_ids = students.values_list('id', flat=True)
-
         enrollments = Enrollment.objects.filter(student_id__in=student_ids)
+        enrollment_ids = enrollments.values_list('id', flat=True)
 
         student_count = students.count()
 
-        # Extract non-null attendance values
-        attendance_values = enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
-        avg_attendance = sum(attendance_values) / len(attendance_values) if attendance_values else 0
+        # --- Weekly attendance calculation ---
+        weekly_attendance = {}
+        weekly_values = {label: [] for label in SNAPSHOT_LABELS.values()}
+        snapshots = AttendanceSnapshot.objects.filter(
+            enrollment_id__in=enrollment_ids,
+            snapshot_date__in=SNAPSHOT_LABELS.keys()
+        ).exclude(attendance_percent__isnull=True)
+        for snap in snapshots:
+            date_str = snap.snapshot_date.strftime("%Y-%m-%d")
+            if date_str in SNAPSHOT_LABELS:
+                week_label = SNAPSHOT_LABELS[date_str]
+                weekly_values[week_label].append(snap.attendance_percent)
+        for week_label, values in weekly_values.items():
+            weekly_avg = round(sum(values) / len(values), 2) if values else 0
+            weekly_attendance[week_label] = weekly_avg
 
-        # Count students with < 75% average attendance
+        # --- Dynamically calculate avg_attendance as mean of 4 weeks (ignore 0s) ---
+        week_attendance_values = [v for v in weekly_attendance.values() if v > 0]
+        avg_attendance = round(sum(week_attendance_values) / len(week_attendance_values), 2) if week_attendance_values else 0
+
+        # Count students with < 75% average attendance (keep as before)
         low_attendance_count = enrollments.filter(total_attendance_percent__lt=75).count()
 
         year_data.append({
             'year': year,
             'description': YEAR_DESCRIPTIONS.get(year, f"Year {year}"),
             'student_count': student_count,
-            'avg_attendance': round(avg_attendance, 2),
+            'avg_attendance': avg_attendance,
             'low_attendance_count': low_attendance_count,
             'status': get_status(avg_attendance),
+            'weekly_attendance': weekly_attendance,
+            'week_labels': list(SNAPSHOT_LABELS.values()),
+            'attendance_values': [weekly_attendance.get(label, 0) for label in SNAPSHOT_LABELS.values()],
         })
+
+    # --- Build radar_data: weeks on axes, years as datasets (for PG) ---
+    week_labels = list(SNAPSHOT_LABELS.values())
+    radar_data = {
+        'labels': week_labels,  # weeks on axes
+        'datasets': []
+    }
+    for y in year_data:
+        rgb = get_year_color(y['year'])
+        dataset = {
+            'label': f"Year {y['year']}",
+            'data': [y['weekly_attendance'].get(week, 0) for week in week_labels],
+            'borderColor': f"rgb({rgb})",
+            'backgroundColor': f"rgba({rgb}, 0.2)",
+            'pointBackgroundColor': f"rgb({rgb})",
+            'pointRadius': 4,
+            'borderWidth': 2
+        }
+        radar_data['datasets'].append(dataset)
 
     context = {
         'year_data': year_data,
+        'radar_data': radar_data
     }
     return render(request, 'analytics/pg_year_selection.html', context)
 
@@ -292,7 +451,7 @@ def course_student_list_pg(request, course_code, year):
 
 from collections import OrderedDict
 
-# Your snapshot labels
+
 SNAPSHOT_LABELS = OrderedDict({
     "2017-09-25": "W1",
     "2017-10-16": "W2",
@@ -321,7 +480,7 @@ def student_attendance_details(request, course_code, year, student_id):
             week_labels.append(label)
             attendance_values.append(snap.attendance_percent or 0)
     
-    # Calculate dynamic student attendance as average of snapshot values
+   
     student_attendance = 0
     if attendance_values:
         student_attendance = round(sum(attendance_values) / len(attendance_values), 2)
@@ -335,7 +494,7 @@ def student_attendance_details(request, course_code, year, student_id):
         'student': student,
         'enrollment': enrollment,
         'year': year,
-        'student_attendance': student_attendance,  # Now using dynamically calculated value
+        'student_attendance': student_attendance,  
         'course_average': course_average,
         'difference': difference,
         'attended_sessions': attended_sessions,

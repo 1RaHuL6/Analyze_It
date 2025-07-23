@@ -152,6 +152,17 @@
 
     <h3>Students for {{ course.code }} - {{ course.title }} (Year {{ year }})</h3>
 
+    <!-- Filter Dropdown -->
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <label for="statusFilter" style="font-weight: 600; color: #fff;">Filter by Status:</label>
+        <select id="statusFilter" style="padding: 6px 12px; border-radius: 5px; border: none; font-size: 1em;">
+            <option value="All">All</option>
+            <option value="Good">Good</option>
+            <option value="Monitor">Monitor</option>
+            <option value="At Risk">At Risk</option>
+        </select>
+    </div>
+
     <table class="course-table">
         <thead>
             <tr>
@@ -160,9 +171,9 @@
                 <th>Status</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="studentTableBody">
             {% for student in students %}
-            <tr onclick="window.location.href='{% url 'analytics:student_attendance_details_pg' course.code year student.user_id %}'" style="cursor: pointer;">
+            <tr data-status="{% if student.attendance == 'N/A' %}N/A{% elif student.attendance >= 75 %}Good{% elif student.attendance >= 50 %}Monitor{% else %}At Risk{% endif %}" onclick="window.location.href='{% url 'analytics:student_attendance_details_pg' course.code year student.user_id %}'" style="cursor: pointer;">
                 <td data-label="Student ID">{{ student.user_id }}</td>
                 <td data-label="Attendance">{{ student.attendance }} %</td>
                 <td data-label="Status">
@@ -185,6 +196,103 @@
         </tbody>
     </table>
 
+    <!-- Chart Container -->
+    <div class="chart-container" style="background: #0f0f2d; border-radius: 15px; padding: 25px; margin: 30px auto; max-width: 1200px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-left: 6px solid #e94560; height: 400px; position: relative;">
+        <h2 style="color: #fff; text-align: center;">Student Attendance</h2>
+        <canvas id="attendanceChart" height="120"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const studentData = {{ students|safe }};
+
+        function getStatus(attendance) {
+            if (attendance === 'N/A') return 'N/A';
+            if (attendance >= 75) return 'Good';
+            if (attendance >= 50) return 'Monitor';
+            return 'At Risk';
+        }
+
+        function getFilteredStudents(status) {
+            if (status === 'All') return studentData;
+            if (status === 'At Risk') return studentData.filter(s => getStatus(s.attendance) === 'At Risk');
+            return studentData.filter(s => getStatus(s.attendance) === status);
+        }
+
+        function updateTable(status) {
+            const tbody = document.getElementById('studentTableBody');
+            const rows = tbody.querySelectorAll('tr[data-status]');
+            rows.forEach(row => {
+                if (status === 'All' || row.getAttribute('data-status') === status) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        let attendanceChart;
+        function updateChart(status) {
+            const filtered = getFilteredStudents(status);
+            const studentLabels = filtered.map(item => item.user_id);
+            const studentAttendance = filtered.map(item => item.attendance);
+            attendanceChart.data.labels = studentLabels;
+            attendanceChart.data.datasets[0].data = studentAttendance;
+            attendanceChart.update();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial chart render
+            const ctx = document.getElementById('attendanceChart').getContext('2d');
+            attendanceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: studentData.map(item => item.user_id),
+                    datasets: [{
+                        label: 'Attendance (%)',
+                        data: studentData.map(item => item.attendance),
+                        backgroundColor: '#e94560',
+                        borderRadius: 8,
+                        barThickness: 40,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: context => context.parsed.y + '%'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: '#ccc',
+                                callback: value => value + '%'
+                            },
+                            grid: { color: '#333' }
+                        },
+                        x: {
+                            ticks: { color: '#ccc' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Filter event
+            document.getElementById('statusFilter').addEventListener('change', function() {
+                const status = this.value;
+                updateTable(status);
+                updateChart(status);
+            });
+        });
+    </script>
 </div>
 </body>
 </html>
