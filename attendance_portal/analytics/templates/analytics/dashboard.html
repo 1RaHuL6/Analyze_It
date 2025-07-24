@@ -239,10 +239,82 @@
         </div>
     </div>
 
+    <!-- Line Chart: UG vs PGT Attendance Across 4 Weeks -->
+    <div class="container" style="max-width: 700px; margin: 40px auto 0 auto;">
+        <div style="background: #16213e; border-radius: 15px; padding: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+            <h2 style="text-align:center; color:#ff2e63; margin-bottom: 20px; font-size:1.3em;">UG vs PGT Attendance Trend</h2>
+            <canvas id="attendanceLineChart" height="120"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         function showMessage(msg) {
             alert(msg);
         }
+
+        // Line Chart for UG vs PGT Attendance
+        const weekLabels = {{ week_labels|safe }};
+        const ugData = {{ ug_weekly_attendance|safe }};
+        const pgtData = {{ pgt_weekly_attendance|safe }};
+        const ctx = document.getElementById('attendanceLineChart').getContext('2d');
+        const attendanceLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: weekLabels,
+                datasets: [
+                    {
+                        label: 'UG',
+                        data: ugData,
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.15)',
+                        pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                        pointRadius: 5,
+                        borderWidth: 3,
+                        tension: 0.3,
+                        fill: false
+                    },
+                    {
+                        label: 'PGT',
+                        data: pgtData,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.15)',
+                        pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                        pointRadius: 5,
+                        borderWidth: 3,
+                        tension: 0.3,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff',
+                            font: { size: 15 }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#fff', font: { size: 14 } },
+                        grid: { color: 'rgba(255,255,255,0.08)' }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { color: '#fff', font: { size: 14 }, stepSize: 10 },
+                        grid: { color: 'rgba(255,255,255,0.08)' }
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>

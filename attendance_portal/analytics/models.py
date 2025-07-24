@@ -39,40 +39,6 @@ class Enrollment(models.Model):
         return f"{self.student.user_id} → {self.course.code}"
 
 
-class Attendance(models.Model):
-    teaching_sessions = models.IntegerField(null=True, blank=True)
-    total_attended = models.IntegerField(null=True, blank=True)
-    non_attendance = models.IntegerField(null=True, blank=True)
-    attendance_percent = models.FloatField(null=True, blank=True)
-
-    def __str__(self):
-        return f"Attendance: {self.id}"
-
-
-class Assessment(models.Model):
-    total_assessments = models.IntegerField(null=True, blank=True)
-    submitted = models.IntegerField(null=True, blank=True)
-    non_submission = models.IntegerField(null=True, blank=True)
-    submitted_percent = models.FloatField(null=True, blank=True)
-
-    def __str__(self):
-        return f"Assessment: {self.id}"
-
-
-class CourseTotalStats(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
-    total_teaching_sessions = models.IntegerField(null=True, blank=True)
-    total_attended = models.IntegerField(null=True, blank=True)
-    total_non_attended = models.IntegerField(null=True, blank=True)
-    total_attendance_percent = models.FloatField(null=True, blank=True)
-
-    total_assessments = models.IntegerField(null=True, blank=True)
-    total_submitted = models.IntegerField(null=True, blank=True)
-    total_non_submission = models.IntegerField(null=True, blank=True)
-    total_submitted_percent = models.FloatField(null=True, blank=True)
-
-    def __str__(self):
-        return f"TotalStats: {self.course.code if self.course else 'None'}"
 
 
 class AttendanceSnapshot(models.Model):

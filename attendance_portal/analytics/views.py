@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Avg, Count, F
-from .models import Student, Course, Attendance, Assessment, CourseTotalStats, Enrollment, AttendanceSnapshot
+from .models import Student, Course,Enrollment, AttendanceSnapshot
 from django.db.models.functions import TruncDate
 from django.contrib.auth.decorators import login_required
 import json
@@ -27,13 +27,38 @@ def dashboard(request):
      
      pg_course_count = Course.objects.filter(enrollment__student__level_of_study='PGT').distinct().count()
      
-     avg_ug_attendance = Enrollment.objects.filter( student__level_of_study='UG').aggregate(avg=Avg('total_attendance_percent')
-    )['avg'] or 0  
-     avg_ug_attendance = round(avg_ug_attendance, 2)
-    
-     avg_pg_attendance = Enrollment.objects.filter( student__level_of_study='PGT').aggregate(avg=Avg('total_attendance_percent')
-    )['avg'] or 0  
-     avg_pg_attendance = round(avg_pg_attendance, 2)
+     # --- Add weekly attendance for UG and PGT for line chart ---
+     week_labels = list(SNAPSHOT_LABELS.values())
+     week_dates = list(SNAPSHOT_LABELS.keys())
+     ug_weekly_attendance = []
+     pgt_weekly_attendance = []
+     for date in week_dates:
+         # UG
+         ug_enrollments = Enrollment.objects.filter(student__level_of_study='UG')
+         ug_enrollment_ids = ug_enrollments.values_list('id', flat=True)
+         ug_snaps = AttendanceSnapshot.objects.filter(
+             enrollment_id__in=ug_enrollment_ids,
+             snapshot_date=date
+         ).exclude(attendance_percent__isnull=True)
+         ug_values = [s.attendance_percent for s in ug_snaps]
+         ug_avg = round(sum(ug_values) / len(ug_values), 2) if ug_values else 0
+         ug_weekly_attendance.append(ug_avg)
+         # PGT
+         pgt_enrollments = Enrollment.objects.filter(student__level_of_study='PGT')
+         pgt_enrollment_ids = pgt_enrollments.values_list('id', flat=True)
+         pgt_snaps = AttendanceSnapshot.objects.filter(
+             enrollment_id__in=pgt_enrollment_ids,
+             snapshot_date=date
+         ).exclude(attendance_percent__isnull=True)
+         pgt_values = [s.attendance_percent for s in pgt_snaps]
+         pgt_avg = round(sum(pgt_values) / len(pgt_values), 2) if pgt_values else 0
+         pgt_weekly_attendance.append(pgt_avg)
+
+     # Calculate dynamic averages as mean of 4 weeks (ignore 0s)
+     ug_attendance_nonzero = [v for v in ug_weekly_attendance if v > 0]
+     avg_ug_attendance = round(sum(ug_attendance_nonzero) / len(ug_attendance_nonzero), 2) if ug_attendance_nonzero else 0
+     pgt_attendance_nonzero = [v for v in pgt_weekly_attendance if v > 0]
+     avg_pg_attendance = round(sum(pgt_attendance_nonzero) / len(pgt_attendance_nonzero), 2) if pgt_attendance_nonzero else 0
      
      low_attendance_ug_count = Enrollment.objects.filter(
         student__level_of_study='UG',
@@ -44,8 +69,7 @@ def dashboard(request):
         student__level_of_study='PGT',
         total_attendance_percent__lt=75
     ).count()
-      
-      
+     
      context = {
         'ug_student_count': ug_student_count,
         'ug_course_count': ug_course_count,
@@ -54,8 +78,10 @@ def dashboard(request):
         'avg_ug_attendance': avg_ug_attendance,
         'avg_pg_attendance': avg_pg_attendance,
         'low_attendance_ug_count': low_attendance_ug_count,
-        'low_attendance_pg_count': low_attendance_pg_count
-         
+        'low_attendance_pg_count': low_attendance_pg_count,
+        'week_labels': week_labels,
+        'ug_weekly_attendance': ug_weekly_attendance,
+        'pgt_weekly_attendance': pgt_weekly_attendance,
     }
      return render(request, 'analytics/dashboard.html', context)
 
@@ -94,7 +120,7 @@ def ug_year_selection(request):
         "2017-11-27": "W4",
     })
 
-    for year in range(6):  # 0 to 5 years
+    for year in range(6):  # 0 to 5 years, as number of years will remain same
         students = Student.objects.filter(level_of_study='UG', year_of_course=year)
         student_ids = students.values_list('id', flat=True)
         enrollments = Enrollment.objects.filter(student_id__in=student_ids)
@@ -145,22 +171,22 @@ def ug_year_selection(request):
             'attendance_values': [weekly_attendance.get(label, 0) for label in SNAPSHOT_LABELS.values()],
         })
     
-    # --- Build new radar_data: years on axes, weeks as datasets ---
+    
     years = [y['year'] for y in year_data]
     week_labels = list(SNAPSHOT_LABELS.values())
 
-    # For each week, collect attendance for all years
+    
     week_to_year_attendance = {week: [] for week in week_labels}
     for week in week_labels:
         for y in year_data:
             week_to_year_attendance[week].append(y['weekly_attendance'].get(week, 0))
 
     radar_data = {
-        'labels': years,  # years on axes
+        'labels': years,  
         'datasets': []
     }
     for i, week in enumerate(week_labels):
-        rgb = get_year_color(i)  # Use color function for weeks
+        rgb = get_year_color(i)  
         dataset = {
             'label': week,
             'data': week_to_year_attendance[week],
@@ -315,12 +341,23 @@ def course_overview_by_year(request, year):
     course_data = []
     for course in courses:
         course_enrollments = enrollments.filter(course=course)
-        attendance_values = course_enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
-        avg_attendance = sum(attendance_values) / len(attendance_values) if attendance_values else 0
+        enrollment_ids = course_enrollments.values_list('id', flat=True)
+        # Calculate weekly attendance for this course (4 weeks)
+        weekly_attendance = []
+        for date in SNAPSHOT_LABELS.keys():
+            snaps = AttendanceSnapshot.objects.filter(
+                enrollment_id__in=enrollment_ids,
+                snapshot_date=date
+            ).exclude(attendance_percent__isnull=True)
+            values = [s.attendance_percent for s in snaps]
+            avg = round(sum(values) / len(values), 2) if values else 0
+            weekly_attendance.append(avg)
+        # Calculate avg_attendance as mean of 4 weeks (ignore 0s)
+        nonzero = [v for v in weekly_attendance if v > 0]
+        avg_attendance = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
         low_attendance_count = course_enrollments.filter(total_attendance_percent__lt=75).count()
         student_count = course_enrollments.count()
 
-        
         def get_status(avg):
             if avg >= 85:
                 return 'Good'
@@ -333,11 +370,12 @@ def course_overview_by_year(request, year):
             'code': course.code,
             'title': course.title,
             'student_count': student_count,
-            'avg_attendance': round(avg_attendance, 2),
+            'avg_attendance': avg_attendance,
             'low_attendance_display': f"{low_attendance_count} ({round((low_attendance_count / student_count) * 100, 1)}%)" if student_count else "0",
-            'status': get_status(avg_attendance)
+            'status': get_status(avg_attendance),
+            'weekly_attendance': weekly_attendance,  # 4 week values for timeline
         })
-        course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
+    course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
 
     return render(request, "analytics/course_overview.html", {
         'year': year,
@@ -359,12 +397,23 @@ def course_overview_by_year_pg(request, year):
     course_data = []
     for course in courses:
         course_enrollments = enrollments.filter(course=course)
-        attendance_values = course_enrollments.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
-        avg_attendance = sum(attendance_values) / len(attendance_values) if attendance_values else 0
+        enrollment_ids = course_enrollments.values_list('id', flat=True)
+        # Calculate weekly attendance for this course (4 weeks)
+        weekly_attendance = []
+        for date in SNAPSHOT_LABELS.keys():
+            snaps = AttendanceSnapshot.objects.filter(
+                enrollment_id__in=enrollment_ids,
+                snapshot_date=date
+            ).exclude(attendance_percent__isnull=True)
+            values = [s.attendance_percent for s in snaps]
+            avg = round(sum(values) / len(values), 2) if values else 0
+            weekly_attendance.append(avg)
+        # Calculate avg_attendance as mean of 4 weeks (ignore 0s)
+        nonzero = [v for v in weekly_attendance if v > 0]
+        avg_attendance = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
         low_attendance_count = course_enrollments.filter(total_attendance_percent__lt=75).count()
         student_count = course_enrollments.count()
 
-        
         def get_status(avg):
             if avg >= 85:
                 return 'Good'
@@ -377,12 +426,12 @@ def course_overview_by_year_pg(request, year):
             'code': course.code,
             'title': course.title,
             'student_count': student_count,
-            'avg_attendance': round(avg_attendance, 2),
+            'avg_attendance': avg_attendance,
             'low_attendance_display': f"{low_attendance_count} ({round((low_attendance_count / student_count) * 100, 1)}%)" if student_count else "0",
-            'status': get_status(avg_attendance)
+            'status': get_status(avg_attendance),
+            'weekly_attendance': weekly_attendance,  # 4 week values for timeline
         })
-        course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
-
+    course_data_sorted = sorted(course_data, key=lambda x: x['avg_attendance'])
 
     return render(request, "analytics/course_overview_pg.html", {
         'year': year,
@@ -440,7 +489,7 @@ def course_student_list_pg(request, course_code, year):
     
     student_data = []
     for e in enrollments:
-        # Dynamically calculate average attendance from 4 weekly snapshots
+        
         snapshots = AttendanceSnapshot.objects.filter(
             enrollment=e,
             snapshot_date__in=SNAPSHOT_LABELS.keys()
@@ -453,7 +502,7 @@ def course_student_list_pg(request, course_code, year):
         student_data.append({
             'user_id': e.student.user_id,
             'attendance': avg_attendance,
-            'year': e.student.year_of_course  # Include year in the context if needed
+            'year': e.student.year_of_course  
         })
     student_data_sorted = sorted(student_data, key=lambda x: (x['attendance'] if x['attendance'] != 'N/A' else -1))
     
@@ -491,11 +540,18 @@ def student_attendance_details(request, course_code, year, student_id):
         student__year_of_course=year,
         course=course
     )
-    attendance_values = enrollments_in_course_year.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
-    if attendance_values:
-        course_average = round(sum(attendance_values) / len(attendance_values), 2)
-    else:
-        course_average = 0
+    enrollment_ids = enrollments_in_course_year.values_list('id', flat=True)
+    weekly_attendance = []
+    for date in SNAPSHOT_LABELS.keys():
+        snaps = AttendanceSnapshot.objects.filter(
+            enrollment_id__in=enrollment_ids,
+            snapshot_date=date
+        ).exclude(attendance_percent__isnull=True)
+        values = [s.attendance_percent for s in snaps]
+        avg = round(sum(values) / len(values), 2) if values else 0
+        weekly_attendance.append(avg)
+    nonzero = [v for v in weekly_attendance if v > 0]
+    course_average = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
 
     # Get snapshots and map to week labels
     snapshots = AttendanceSnapshot.objects.filter(enrollment=enrollment).order_by('snapshot_date')
@@ -545,11 +601,18 @@ def student_attendance_details_pg(request, course_code, year, student_id):
         student__year_of_course=year,
         course=course
     )
-    attendance_values = enrollments_in_course_year.exclude(total_attendance_percent__isnull=True).values_list('total_attendance_percent', flat=True)
-    if attendance_values:
-        course_average = round(sum(attendance_values) / len(attendance_values), 2)
-    else:
-        course_average = 0
+    enrollment_ids = enrollments_in_course_year.values_list('id', flat=True)
+    weekly_attendance = []
+    for date in SNAPSHOT_LABELS.keys():
+        snaps = AttendanceSnapshot.objects.filter(
+            enrollment_id__in=enrollment_ids,
+            snapshot_date=date
+        ).exclude(attendance_percent__isnull=True)
+        values = [s.attendance_percent for s in snaps]
+        avg = round(sum(values) / len(values), 2) if values else 0
+        weekly_attendance.append(avg)
+    nonzero = [v for v in weekly_attendance if v > 0]
+    course_average = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
 
     # Get snapshots and map to week labels
     snapshots = AttendanceSnapshot.objects.filter(enrollment=enrollment).order_by('snapshot_date')
