@@ -287,21 +287,16 @@
 
     <!-- Chart container -->
     <div class="chart-container">
-        <div class="chart-title">Average Attendance Per Course</div>
-        <canvas id="attendanceChart"></canvas>
+        <div class="chart-title">Course Attendance Scatter Plot</div>
+        <canvas id="attendanceScatter"></canvas>
     </div>
 
     <script>
-        // Get the course data passed from the view
-        const courseData = {{ courses|safe }};
         
-        // Extract course codes and average attendance
-        function getFilteredCourses(status) {
-            if (status === 'All') return courseData;
-            if (status === 'At Risk') return courseData.filter(c => c.status === 'At Risk');
-            return courseData.filter(c => c.status === status);
-        }
+        const courseData = {{ courses|safe }};
+        const weekLabels = ["W1", "W2", "W3", "W4"];
 
+        
         function updateTable(status) {
             const tbody = document.getElementById('courseTableBody');
             const rows = tbody.querySelectorAll('tr');
@@ -314,30 +309,31 @@
             });
         }
 
-        // Chart.js setup
-        let attendanceChart;
-        function updateChart(status) {
-            const filtered = getFilteredCourses(status);
-            const courseLabels = filtered.map(item => item.code);
-            const avgAttendance = filtered.map(item => item.avg_attendance);
-            attendanceChart.data.labels = courseLabels;
-            attendanceChart.data.datasets[0].data = avgAttendance;
-            attendanceChart.update();
-        }
-
+        
         document.addEventListener('DOMContentLoaded', function() {
-            // Initial chart render
-            const ctx = document.getElementById('attendanceChart').getContext('2d');
-            attendanceChart = new Chart(ctx, {
-                type: 'bar',
+            
+            let scatterData = [];
+            courseData.forEach(course => {
+                (course.weekly_attendance || []).forEach((att, i) => {
+                    scatterData.push({
+                        x: i + 1, 
+                        y: att,
+                        course: course.code,
+                        week: weekLabels[i]
+                    });
+                });
+            });
+
+            const ctx = document.getElementById('attendanceScatter').getContext('2d');
+            new Chart(ctx, {
+                type: 'scatter',
                 data: {
-                    labels: courseData.map(item => item.code),
                     datasets: [{
-                        label: 'Average Attendance (%)',
-                        data: courseData.map(item => item.avg_attendance),
+                        label: 'Course Attendance',
+                        data: scatterData,
                         backgroundColor: '#e94560',
-                        borderRadius: 8,
-                        barThickness: 40,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
                     }]
                 },
                 options: {
@@ -347,35 +343,56 @@
                         legend: { display: false },
                         tooltip: {
                             callbacks: {
-                                label: context => context.parsed.y + '%'
+                                label: function(context) {
+                                    const d = context.raw;
+                                    return `Course: ${d.course}, Week: ${d.week}, Attendance: ${d.y}%`;
+                                }
                             }
                         }
                     },
                     scales: {
+                        x: {
+                            type: 'linear',
+                            min: 1,
+                            max: 4,
+                            title: {
+                                display: true,
+                                text: 'Week',
+                                color: '#fff',
+                                font: { weight: 'bold' }
+                            },
+                            ticks: {
+                                color: '#ccc',
+                                callback: function(value) {
+                                    return weekLabels[value - 1] || value;
+                                },
+                                stepSize: 1
+                            },
+                            grid: { color: '#333' }
+                        },
                         y: {
                             beginAtZero: true,
                             max: 100,
+                            title: {
+                                display: true,
+                                text: 'Attendance (%)',
+                                color: '#fff',
+                                font: { weight: 'bold' }
+                            },
                             ticks: {
                                 color: '#ccc',
                                 callback: value => value + '%'
                             },
                             grid: { color: '#333' }
-                        },
-                        x: {
-                            ticks: { 
-                                color: '#ccc'
-                            },
-                            grid: { display: false }
                         }
                     }
                 }
             });
 
-            // Filter event
+            // Filter event (table only)
             document.getElementById('statusFilter').addEventListener('change', function() {
                 const status = this.value;
                 updateTable(status);
-                updateChart(status);
             });
         });
     </script>
