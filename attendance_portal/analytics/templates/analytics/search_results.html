@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - AnalyzeIt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1a1a2e;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: #16213e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .nav-left .nav-logo {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #e94560;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .welcome-text {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        .nav-button {
+            background: #e94560;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #ff2e63;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            background: #e94560;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background: #ff2e63;
+            transform: translateY(-2px);
+        }
+
+        .search-form {
+            background: #16213e;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .search-form h2 {
+            color: #ff2e63;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .search-inputs {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-inputs input,
+        .search-inputs select {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #1a1a2e;
+            color: white;
+            font-size: 14px;
+        }
+
+        .search-inputs input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-inputs select {
+            min-width: 150px;
+        }
+
+        .search-button {
+            background: #e94560;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-button:hover {
+            background: #ff2e63;
+        }
+
+        .error-message {
+            background: #e94560;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .results-section {
+            background: #16213e;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .results-header {
+            color: #ff2e63;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 10px;
+        }
+
+        .student-info {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .student-info h3 {
+            color: #ff2e63;
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            background: #2c2c54;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            color: #bbb;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .course-card {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e94560;
+        }
+
+        .course-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff2e63;
+        }
+
+        .course-code {
+            background: #2c2c54;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .attendance-chart {
+            background: #2c2c54;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .chart-container {
+            height: 200px;
+            position: relative;
+        }
+
+        .course-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            background: #2c2c54;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff2e63;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #bbb;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .search-inputs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-inputs input,
+            .search-inputs select {
+                min-width: auto;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo">🎓 AnalyzeIt</div>
+        </div>
+        <div class="nav-right">
+            <span class="welcome-text">Welcome, {{ request.user.username }}</span>
+            <a href="{% url 'analytics:dashboard' %}" class="nav-button">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="{% url 'analytics:dashboard' %}" class="back-button">← Back to Dashboard</a>
+
+        <!-- Search Form -->
+        <div class="search-form">
+            <h2>Search</h2>
+            <form method="GET" action="{% url 'analytics:search' %}" class="search-inputs">
+                <input type="text" name="query" placeholder="Enter search term..." value="{{ query }}" required>
+                <select name="search_type">
+                    <option value="student" {% if search_type == 'student' %}selected{% endif %}>Student</option>
+                    <option value="course" {% if search_type == 'course' %}selected{% endif %}>Course</option>
+                </select>
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+
+        {% if error %}
+            <div class="error-message">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        {% if found %}
+            {% if search_type == 'student' %}
+                <!-- Student Results -->
+                <div class="results-section">
+                    <div class="results-header">
+                        Student Search Results: {{ student.user_id }}
+                    </div>
+                    
+                    <div class="student-info">
+                        <h3>Student Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Student ID</div>
+                                <div class="info-value">{{ student.user_id }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Level of Study</div>
+                                <div class="info-value">{{ student.level_of_study }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Year of Course</div>
+                                <div class="info-value">{{ student.year_of_course }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Total Courses</div>
+                                <div class="info-value">{{ enrollment_data|length }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="color: #ff2e63; margin-bottom: 20px;">Course Enrollments</h3>
+                    
+                    {% for data in enrollment_data %}
+                        <div class="course-card">
+                            <div class="course-header">
+                                <div class="course-title">{{ data.course.title }}</div>
+                                <div class="course-code">{{ data.course.code }}</div>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">{{ data.avg_attendance }}%</div>
+                                    <div class="stat-label">Average Attendance</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">{{ data.attended_sessions }}</div>
+                                    <div class="stat-label">Attended Sessions</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">{{ data.missed_sessions }}</div>
+                                    <div class="stat-label">Missed Sessions</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">{{ data.total_sessions }}</div>
+                                    <div class="stat-label">Total Sessions</div>
+                                </div>
+                            </div>
+
+                            {% if data.week_labels %}
+                                <div class="attendance-chart">
+                                    <h4 style="color: #ff2e63; margin-bottom: 15px;">Attendance Over Time</h4>
+                                    <div class="chart-container">
+                                        <canvas id="chart-{{ forloop.counter }}" width="400" height="200"></canvas>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+            {% elif search_type == 'course' %}
+                <!-- Course Results -->
+                <div class="results-section">
+                    <div class="results-header">
+                        Course Search Results: {{ course.code }}
+                    </div>
+                    
+                    <div class="student-info">
+                        <h3>Course Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Course Code</div>
+                                <div class="info-value">{{ course.code }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Course Title</div>
+                                <div class="info-value">{{ course.title }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Total Students</div>
+                                <div class="info-value">{{ total_students }}</div>
+                                <div style="margin-top: 10px;">
+                                    <canvas id="studentLevelChart" width="200" height="100"></canvas>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Average Attendance</div>
+                                <div class="info-value">{{ course_avg_attendance }}%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid" style="margin-top: 20px;">
+                            <div class="info-item">
+                                <div class="info-label">UG Students</div>
+                                <div class="info-value">{{ ug_students }}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">PGT Students</div>
+                                <div class="info-value">{{ pgt_students }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weekly Attendance Chart -->
+                    <div class="attendance-chart" style="margin-top: 20px;">
+                        <h4 style="color: #ff2e63; margin-bottom: 15px;">Course Attendance Over Time</h4>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="weeklyAttendanceChart" width="600" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    {% comment %} <div class="course-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">{{ low_attendance_count }}</div>
+                            <div class="stat-label">Students < 75% Attendance</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">{{ total_students|add:"-"|add:low_attendance_count }}</div>
+                            <div class="stat-label">Students ≥ 75% Attendance</div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+            {% endif %}
+        {% endif %}
+    </div>
+
+    {% if found and search_type == 'student' and enrollment_data %}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            {% for data in enrollment_data %}
+                {% if data.week_labels %}
+                    const ctx{{ forloop.counter }} = document.getElementById('chart-{{ forloop.counter }}').getContext('2d');
+                    new Chart(ctx{{ forloop.counter }}, {
+                        type: 'line',
+                        data: {
+                            labels: {{ data.week_labels|safe }},
+                            datasets: [{
+                                label: 'Attendance %',
+                                data: {{ data.attendance_values|safe }},
+                                borderColor: '#ff2e63',
+                                backgroundColor: 'rgba(255, 46, 99, 0.2)',
+                                borderWidth: 2,
+                                tension: 0.3,
+                                fill: true,
+                                pointBackgroundColor: '#fff',
+                                pointBorderColor: '#ff2e63',
+                                pointRadius: 5,
+                                pointHoverRadius: 7
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    max: 100,
+                                    ticks: { color: '#bbb' },
+                                    grid: { color: '#2c2c54' }
+                                },
+                                x: {
+                                    ticks: { color: '#bbb' },
+                                    grid: { color: '#2c2c54' }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    labels: { color: '#bbb' }
+                                }
+                            }
+                        }
+                    });
+                {% endif %}
+            {% endfor %}
+        </script>
+    {% endif %}
+
+    {% if found and search_type == 'course' %}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Student Level Distribution Chart (Bar Chart)
+            const studentLevelCtx = document.getElementById('studentLevelChart').getContext('2d');
+            new Chart(studentLevelCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['UG', 'PGT'],
+                    datasets: [{
+                        label: 'Students',
+                        data: [{{ ug_students }}, {{ pgt_students }}],
+                        backgroundColor: ['rgba(54, 162, 235, 0.8)', 'rgba(255, 99, 132, 0.8)'],
+                        borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)'],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#bbb', font: { size: 10 } },
+                            grid: { color: '#2c2c54' }
+                        },
+                        x: {
+                            ticks: { color: '#bbb', font: { size: 10 } },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Weekly Attendance Chart (Line Chart)
+            const weeklyAttendanceCtx = document.getElementById('weeklyAttendanceChart').getContext('2d');
+            new Chart(weeklyAttendanceCtx, {
+                type: 'line',
+                data: {
+                    labels: {{ week_labels|safe }},
+                    datasets: [{
+                        label: 'Course Attendance %',
+                        data: {{ weekly_attendance|safe }},
+                        borderColor: '#ff2e63',
+                        backgroundColor: 'rgba(255, 46, 99, 0.2)',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        fill: true,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#ff2e63',
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#bbb',
+                                font: { size: 14 }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { color: '#bbb', font: { size: 12 } },
+                            grid: { color: '#2c2c54' },
+                            title: {
+                                display: true,
+                                text: 'Attendance %',
+                                color: '#bbb',
+                                font: { size: 12 }
+                            }
+                        },
+                        x: {
+                            ticks: { color: '#bbb', font: { size: 12 } },
+                            grid: { color: '#2c2c54' },
+                            title: {
+                                display: true,
+                                text: 'Week',
+                                color: '#bbb',
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    {% endif %}
+</body>
+</html> 

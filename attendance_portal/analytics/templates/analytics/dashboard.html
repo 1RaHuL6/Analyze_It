@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Student Attendance Dashboard</title>
+    <title>AnlyzeIt</title>
     <style>
         * {
             margin: 0;
@@ -194,6 +194,26 @@
     <div class="container">
         <h1>Dashboard</h1>
 
+        
+        <div style="background: #16213e; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+            <h2 style="color: #ff2e63; margin-bottom: 20px; font-size: 1.3em;">Search for any course or individual student</h2>
+            <form method="GET" action="{% url 'analytics:search' %}" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <input type="text" name="query" placeholder="Enter search term..." 
+                           style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: #1a1a2e; color: white; font-size: 14px;" required>
+                </div>
+                <div style="min-width: 150px;">
+                    <select name="search_type" style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: #1a1a2e; color: white; font-size: 14px;">
+                        <option value="student">Student</option>
+                        <option value="course">Course Code</option>
+                    </select>
+                </div>
+                <button type="submit" style="background: #e94560; color: white; padding: 12px 25px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                    Search
+                </button>
+            </form>
+        </div>
+
         <div class="level">
             <!-- First Row: UG and PGT Main Widgets -->
             <div class="dashboard-row">
@@ -239,7 +259,7 @@
         </div>
     </div>
 
-    <!-- Line Chart: UG vs PGT Attendance Across 4 Weeks -->
+    <!-- Line Chart -->
     <div class="container" style="max-width: 700px; margin: 40px auto 0 auto;">
         <div style="background: #16213e; border-radius: 15px; padding: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
             <h2 style="text-align:center; color:#ff2e63; margin-bottom: 20px; font-size:1.3em;">UG vs PGT Attendance Trend</h2>
@@ -257,6 +277,8 @@
         const weekLabels = {{ week_labels|safe }};
         const ugData = {{ ug_weekly_attendance|safe }};
         const pgtData = {{ pgt_weekly_attendance|safe }};
+        const ugDataLT75 = {{ ug_weekly_attendance_lt75|safe }};
+        const pgtDataLT75 = {{ pgt_weekly_attendance_lt75|safe }};
         const ctx = document.getElementById('attendanceLineChart').getContext('2d');
         const attendanceLineChart = new Chart(ctx, {
             type: 'line',
@@ -282,6 +304,30 @@
                         pointBackgroundColor: 'rgba(255, 99, 132, 1)',
                         pointRadius: 5,
                         borderWidth: 3,
+                        tension: 0.3,
+                        fill: false
+                    },
+                    {
+                        label: 'UG <75%',
+                        data: ugDataLT75,
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        backgroundColor: 'rgba(255, 206, 86, 0.15)',
+                        pointBackgroundColor: 'rgba(255, 206, 86, 1)',
+                        pointRadius: 5,
+                        borderWidth: 2,
+                        borderDash: [6, 6],
+                        tension: 0.3,
+                        fill: false
+                    },
+                    {
+                        label: 'PGT <75%',
+                        data: pgtDataLT75,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.15)',
+                        pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                        pointRadius: 5,
+                        borderWidth: 2,
+                        borderDash: [6, 6],
                         tension: 0.3,
                         fill: false
                     }

@@ -17,5 +17,7 @@ urlpatterns = [
     path('pg/course/<str:course_code>/<int:year>/', views.course_student_list_pg, name='course_students_pg'),
     path('pg/course/<str:course_code>/year/<int:year>/student/<str:student_id>/', views.student_attendance_details_pg, name='student_attendance_details_pg'),
     
+    # Search functionality
+    path('search/', views.search_view, name='search'),
 
 ] 

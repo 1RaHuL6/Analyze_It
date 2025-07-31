@@ -33,7 +33,7 @@ class Enrollment(models.Model):
     total_teaching_sessions = models.IntegerField(null=True, blank=True)
 
     class Meta:
-        unique_together = ('student', 'course')  # prevent duplicate enrollments
+        unique_together = ('student', 'course')  
 
     def __str__(self):
         return f"{self.student.user_id} → {self.course.code}"
