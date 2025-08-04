@@ -308,7 +308,7 @@
         <!-- Search Form -->
         <div class="search-form">
             <h2>Search</h2>
-            <form method="GET" action="{% url 'analytics:search' %}" class="search-inputs">
+            <form method="GET" action="{% url 'analytics:search_view' %}" class="search-inputs">
                 <input type="text" name="query" placeholder="Enter search term..." value="{{ query }}" required>
                 <select name="search_type">
                     <option value="student" {% if search_type == 'student' %}selected{% endif %}>Student</option>
