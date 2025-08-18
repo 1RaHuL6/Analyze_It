@@ -147,7 +147,7 @@
 <body>
 <div class="container">
 
-    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
+    <a href="{% url 'analytics:dashboard' %}" class="back-button"> Dashboard </a>
 
     <div class="breadcrumb">
         <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
@@ -164,7 +164,7 @@
     <div class="top-charts-container">
         <div class="chart-container">
             <div class="detail-card">
-                <h3>📊 Student vs Course Comparison</h3>
+                <h3> Student vs Course Comparison</h3>
                 <div class="chart-placeholder" style="padding: 10px;">
                     <canvas id="comparisonChart" width="300" height="200"></canvas>
                 </div>
@@ -252,7 +252,7 @@ window.onload = function () {
             }
         });
     } else {
-        console.error("❌ pieChart canvas not found in DOM.");
+        console.error(" pieChart canvas not found in DOM.");
     }
 
     // Line chart for attendance over time
@@ -314,7 +314,7 @@ window.onload = function () {
             }
         });
     } else {
-        console.error("❌ attendanceChart canvas not found.");
+        console.error("attendanceChart canvas not found.");
     }
 };
 </script>

@@ -18,19 +18,19 @@ class Command(BaseCommand):
         df = pd.read_excel(excel_path)
         self.stdout.write(f"Loaded {len(df)} rows from {excel_path}")
         
-        # Group by course code and calculate totals
+        
         course_stats = df.groupby('Course Code').agg({
-            'Teaching Sessions': ['sum', 'max'],  # sum for total, max for latest
+            'Teaching Sessions': ['sum', 'max'],  
             'Attended_new': 'sum',
             'Non Attendance': 'sum', 
-            '% Attendance': 'mean',  # average attendance percentage
-            'Assessments': ['sum', 'max'],  # sum for total, max for latest
+            '% Attendance': 'mean',  
+            'Assessments': ['sum', 'max'],  
             'assessments_submitted': 'sum',
             'Non Submission': 'sum',
-            '% Submitted': 'mean'  # average submission percentage
+            '% Submitted': 'mean'  
         }).round(2)
         
-        # Flatten column names
+       
         course_stats.columns = ['_'.join(col).strip() for col in course_stats.columns]
         
         created_count = 0
@@ -43,8 +43,7 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.WARNING(f"Course not found: {course_code}"))
                 continue
                 
-            # Use the latest values for teaching sessions and assessments (max values)
-            # and totals for attended/submitted counts
+        
             course_total_stats, created = CourseTotalStats.objects.update_or_create(
                 course=course,
                 defaults={

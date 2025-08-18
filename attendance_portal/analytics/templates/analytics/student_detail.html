@@ -156,7 +156,7 @@
 <body>
 <div class="container">
 
-    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
+    <a href="{% url 'analytics:dashboard' %}" class="back-button"> Dashboard </a>
 
     <div class="breadcrumb">
     <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
@@ -261,10 +261,10 @@ window.onload = function () {
             }
         });
     } else {
-        console.error("❌ pieChart canvas not found in DOM.");
+        console.error(" pieChart canvas not found in DOM.");
     }
 
-    // ✅ Line chart for attendance over time
+    //  Line chart for attendance over time
     const lineCanvas = document.getElementById('attendanceChart');
     if (lineCanvas) {
         const lineCtx = lineCanvas.getContext('2d');
@@ -323,7 +323,7 @@ window.onload = function () {
             }
         });
     } else {
-        console.error("❌ attendanceChart canvas not found.");
+        console.error(" attendanceChart canvas not found.");
     }
 };
 </script>

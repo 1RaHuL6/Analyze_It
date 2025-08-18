@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.db.models import Avg, Count, F
+from django.db.models import Avg, Count
 from .models import Student, Course,Enrollment, AttendanceSnapshot
 from django.db.models.functions import TruncDate
 from django.contrib.auth.decorators import login_required
@@ -29,13 +29,9 @@ YEAR_DESCRIPTIONS = {
 # level 1
 def dashboard(request):
      ug_student_count = Student.objects.filter(level_of_study='UG').count()
-     
      ug_course_count = Course.objects.filter( enrollment__student__level_of_study='UG').distinct().count()
-     
      pg_student_count = Student.objects.filter(level_of_study='PGT').count()
-     
      pg_course_count = Course.objects.filter(enrollment__student__level_of_study='PGT').distinct().count()
-     
      
      week_labels = list(SNAPSHOT_LABELS.values())
      week_dates = list(SNAPSHOT_LABELS.keys())
@@ -103,11 +99,10 @@ def dashboard(request):
         'week_labels': week_labels,
         'ug_weekly_attendance': ug_weekly_attendance,
         'pgt_weekly_attendance': pgt_weekly_attendance,
-        'ug_weekly_attendance_lt75': ug_weekly_attendance_lt75,  # NEW
-        'pgt_weekly_attendance_lt75': pgt_weekly_attendance_lt75,  # NEW
+        'ug_weekly_attendance_lt75': ug_weekly_attendance_lt75, 
+        'pgt_weekly_attendance_lt75': pgt_weekly_attendance_lt75,  
     }
      return render(request, 'analytics/dashboard.html', context)
-
 
 def get_status(avg_attendance):
     if avg_attendance >= 85:
@@ -118,7 +113,7 @@ def get_status(avg_attendance):
         return "Monitor"
     else:
         return "Critical"
-    
+        
 def get_year_color(year):
     """Return RGB color string for each year"""
     colors = [
@@ -218,10 +213,6 @@ def ug_year_selection(request):
         'radar_data': radar_data  
     }
     return render(request, 'analytics/ug_year_selection.html', context)
-
-
-
-
 # level 2 UG    
 @login_required
 def ug_year_selection_1(request):
@@ -523,11 +514,6 @@ def course_student_list_pg(request, course_code, year):
     }
     return render(request, 'analytics/course_students_pg.html', context)
 
-
-
-
-from collections import OrderedDict
-
 #level 5 UG
 @login_required   
 def student_attendance_details(request, course_code, year, student_id):
@@ -590,6 +576,8 @@ def student_attendance_details(request, course_code, year, student_id):
         'attendance_values': attendance_values_list,
     }
     return render(request, 'analytics/student_detail.html', context)
+
+#level 5 PGT
 @login_required   
 def student_attendance_details_pg(request, course_code, year, student_id):
     course = get_object_or_404(Course, code=course_code)
@@ -652,12 +640,9 @@ def student_attendance_details_pg(request, course_code, year, student_id):
     }
     return render(request, 'analytics/student_detail_pg.html', context)
 
-
+#search featre
 @login_required
 def search_view(request):
-    """
-    Search view for finding students or courses by ID/code
-    """
     query = request.GET.get('query', '').strip()
     search_type = request.GET.get('search_type', 'student')
     
@@ -669,26 +654,20 @@ def search_view(request):
         })
     
     if search_type == 'student':
-        # Search for student by user_id
         try:
             student = Student.objects.get(user_id=query)
             
-            # Get all enrollments for this student
             enrollments = Enrollment.objects.filter(student=student).select_related('course')
             
-            # Calculate attendance data for each enrollment
             enrollment_data = []
             for enrollment in enrollments:
-                # Get snapshots for this enrollment
                 snapshots = AttendanceSnapshot.objects.filter(
                     enrollment=enrollment
                 ).exclude(attendance_percent__isnull=True).order_by('snapshot_date')
                 
-                # Calculate average attendance
                 attendance_values = [s.attendance_percent for s in snapshots]
                 avg_attendance = round(sum(attendance_values) / len(attendance_values), 2) if attendance_values else 0
                 
-                # Get weekly attendance data
                 week_labels = []
                 attendance_values_list = []
                 
@@ -728,40 +707,32 @@ def search_view(request):
             })
     
     elif search_type == 'course':
-        # Search for course by code
         try:
             course = Course.objects.get(code=query)
             
-            # Get all enrollments for this course
             enrollments = Enrollment.objects.filter(course=course).select_related('student')
             
-            # Calculate course statistics
             total_students = enrollments.count()
             
-            # Count students by level
             ug_students = enrollments.filter(student__level_of_study='UG').count()
             pgt_students = enrollments.filter(student__level_of_study='PGT').count()
             
-            # Calculate weekly attendance for the course
             weekly_attendance = []
             week_labels = list(SNAPSHOT_LABELS.values())
             
             for date in SNAPSHOT_LABELS.keys():
-                # Get all enrollments for this course
                 course_enrollment_ids = enrollments.values_list('id', flat=True)
                 
-                # Get snapshots for this week
                 snaps = AttendanceSnapshot.objects.filter(
                     enrollment_id__in=course_enrollment_ids,
                     snapshot_date=date
                 ).exclude(attendance_percent__isnull=True)
                 
-                # Calculate average attendance for this week
                 values = [s.attendance_percent for s in snaps]
                 avg = round(sum(values) / len(values), 2) if values else 0
                 weekly_attendance.append(avg)
             
-            # Calculate overall course average attendance
+            
             attendance_values = []
             for enrollment in enrollments:
                 snapshots = AttendanceSnapshot.objects.filter(
@@ -805,9 +776,6 @@ def search_view(request):
         'search_type': search_type,
         'found': False
     })
-
-
-
 
 
 

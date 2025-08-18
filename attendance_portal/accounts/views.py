@@ -7,6 +7,8 @@ from .forms import StaffUserRegistrationForm
 from django.contrib.auth.models import User
 from analytics.views import dashboard  
 
+#user id and password 
+
 #admin
 #admin
 
@@ -39,7 +41,7 @@ def register_user(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
-            user.is_staff = True  # Make sure they can log in
+            user.is_staff = True  # Make's sure they can log in.
             user.save()
             messages.success(request, 'New staff user registered successfully.')
             return redirect('analytics:dashboard')

@@ -147,7 +147,7 @@
 
 <div class="container">
 
-    <a href="{% url 'analytics:dashboard' %}" class="back-button">🏠 Dashboard </a>
+    <a href="{% url 'analytics:dashboard' %}" class="back-button">Dashboard </a>
 
     <div class="breadcrumb">
         <a href="{% url 'analytics:dashboard' %}" class="breadcrumb-link">Dashboard</a> &gt;
@@ -228,12 +228,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Prepare scatter data: each dot is {x: week, y: attendance, course: code}
+            // Prepare scatter data
             let scatterData = [];
             courseData.forEach(course => {
                 (course.weekly_attendance || []).forEach((att, i) => {
                     scatterData.push({
-                        x: i + 1, // Weeks 1-4 as 1-4
+                        x: i + 1, // Weeks 1-4
                         y: att,
                         course: course.code,
                         week: weekLabels[i]

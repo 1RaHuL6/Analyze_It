@@ -294,11 +294,10 @@
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <div class="nav-logo">🎓 AnalyzeIt</div>
+            <div class="nav-logo"> AnalyzeIt</div>
         </div>
         <div class="nav-right">
             <span class="welcome-text">Welcome, {{ request.user.username }}</span>
-            <a href="{% url 'analytics:dashboard' %}" class="nav-button">Dashboard</a>
         </div>
     </nav>
 
@@ -445,17 +444,7 @@
                         </div>
                     </div>
 
-                    {% comment %} <div class="course-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">{{ low_attendance_count }}</div>
-                            <div class="stat-label">Students < 75% Attendance</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">{{ total_students|add:"-"|add:low_attendance_count }}</div>
-                            <div class="stat-label">Students ≥ 75% Attendance</div>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
+                   
             {% endif %}
         {% endif %}
     </div>
@@ -514,7 +503,7 @@
     {% if found and search_type == 'course' %}
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-            // Student Level Distribution Chart (Bar Chart)
+            // Student Level Distribution Chart 
             const studentLevelCtx = document.getElementById('studentLevelChart').getContext('2d');
             new Chart(studentLevelCtx, {
                 type: 'bar',
@@ -551,7 +540,7 @@
                 }
             });
 
-            // Weekly Attendance Chart (Line Chart)
+            // Weekly Attendance Chart 
             const weeklyAttendanceCtx = document.getElementById('weeklyAttendanceChart').getContext('2d');
             new Chart(weeklyAttendanceCtx, {
                 type: 'line',

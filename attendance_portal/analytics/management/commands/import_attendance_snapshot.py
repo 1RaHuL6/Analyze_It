@@ -17,7 +17,7 @@ class Command(BaseCommand):
         dry_run = options['dry_run']
 
         if dry_run:
-            self.stdout.write(self.style.HTTP_INFO('Running in dry-run mode. No data will be imported.'))
+            self.stdout.write(self.style.HTTP_INFO(' No data will be imported.'))
             
         if not os.path.exists(excel_path):
             self.stdout.write(self.style.ERROR(f"File not found: {excel_path}"))
@@ -32,7 +32,7 @@ class Command(BaseCommand):
         
         # Forward fill to handle missing dates
         df['snapshot_date'].ffill(inplace=True)
-        self.stdout.write(self.style.HTTP_INFO("Applied forward fill to 'snapshot_date' to handle missing values."))
+        self.stdout.write(self.style.HTTP_INFO("Applied forward fill."))
 
         snapshots = []
         errors = {
@@ -52,7 +52,7 @@ class Command(BaseCommand):
                 continue
 
             try:
-                # This part for checking enrollment remains the same
+                
                 Enrollment.objects.select_related('student', 'course').get(
                     student__user_id=user_id,
                     course__code=course_code
@@ -66,12 +66,12 @@ class Command(BaseCommand):
                 })
                 continue
 
-            # Check dates
+           
             snapshot_date_val = row.get('snapshot_date')
             last_attendance_val = row.get('Last Attendence')
             
             try:
-                # Attempt to parse dates
+                
                 snapshot_date = pd.to_datetime(snapshot_date_val, dayfirst=True).date() if pd.notna(snapshot_date_val) else None
                 last_attendance = pd.to_datetime(last_attendance_val, dayfirst=True) if pd.notna(last_attendance_val) else None
                 
@@ -85,12 +85,12 @@ class Command(BaseCommand):
                     'snapshot_date': snapshot_date_val,
                     'last_attendance': last_attendance_val
                 })
-                continue # Skip to next row
+                continue 
             
-            # If we are in a real run, create the snapshot object
+            
             if not dry_run:
                 snapshot = AttendanceSnapshot(
-                    enrollment=Enrollment.objects.get(student__user_id=user_id, course__code=course_code), # Re-fetch for object creation
+                    enrollment=Enrollment.objects.get(student__user_id=user_id, course__code=course_code), 
                     snapshot_date=snapshot_date,
                     teaching_sessions=int(row['Teaching Sessions']) if pd.notna(row['Teaching Sessions']) else None,
                     attended=int(row['Attended_new']) if pd.notna(row['Attended_new']) else None,
@@ -104,11 +104,11 @@ class Command(BaseCommand):
                 )
                 snapshots.append(snapshot)
         
-        # Dry run summary
+       
         if dry_run:
             self.stdout.write(self.style.SUCCESS('\nDry run summary:'))
             if errors['missing_enrollments'] > 0:
-                self.stdout.write(self.style.WARNING(f"\nFound {errors['missing_enrollments']} missing enrollments (will be skipped):"))
+                self.stdout.write(self.style.WARNING(f"\nFound {errors['missing_enrollments']} missing enrollments "))
                 for detail in errors['missing_enrollment_details']:
                     self.stdout.write(f"  - Row {detail['row']}: User ID '{detail['user_id']}', Course Code '{detail['course_code']}'")
             else:
@@ -124,7 +124,7 @@ class Command(BaseCommand):
             self.stdout.write(f"\nRows with other missing data: {errors['missing_data']}")
             return
 
-        # Regular import process
+        
         if snapshots:
             batch_size = 500
             total_batches = (len(snapshots) + batch_size - 1) // batch_size
@@ -136,10 +136,10 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.SUCCESS(
             f"\nImport Complete!\n"
-            f"- Successfully imported: {len(snapshots)} snapshots\n"
+            f" Successfully imported: {len(snapshots)} snapshots\n"
             f"- Skipped missing enrollments: {errors['missing_enrollments']}\n"
-            f"- Skipped invalid dates: {errors['invalid_dates']}\n"
-            f"- Skipped missing data: {errors['missing_data']}\n"
+            f" Skipped invalid dates: {errors['invalid_dates']}\n"
+            f" Skipped missing data: {errors['missing_data']}\n"
         ))
         if errors['missing_enrollment_details']:
             self.stdout.write(self.style.WARNING("\nDetails of skipped missing enrollments:"))

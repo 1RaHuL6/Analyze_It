@@ -174,10 +174,10 @@
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <div class="nav-logo">🎓 AnalyzeIt</div>
+            <div class="nav-logo"> AnalyzeIt</div>
         </div>
         <div class="nav-right">
-            <span class="welcome-text">Welcome, {{ request.user.username }}</span>
+            <span class="welcome-text">Welcome! You are logged in as, {{ request.user.username }}</span>
 
             <form method="POST" action="{% url 'accounts:register' %}" style="display: inline;">
                 {% csrf_token %}
@@ -215,7 +215,7 @@
         </div>
 
         <div class="level">
-            <!-- First Row: UG and PGT Main Widgets -->
+            <!-- First Row: UG and PGT Main -->
             <div class="dashboard-row">
                <a href="{% url 'analytics:ug_year_selection' %}" style="text-decoration: none; color: inherit;"> 
                 <div class="widget-large"style="cursor: pointer;">
@@ -244,7 +244,7 @@
                 </div>
             </div>
 
-            <!-- Second Row: Low Attendance Widgets -->
+            <!-- Second Row: Low Attendance  -->
             <div class="dashboard-row">
                 <div class="widget-medium" >
                     <div class="widget-value"> {{low_attendance_ug_count}} </div>
@@ -269,11 +269,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        function showMessage(msg) {
-            alert(msg);
-        }
-
-        // Line Chart for UG vs PGT Attendance
+        function showMessage(msg) {alert(msg);}// Line Chart for UG vs PGT Attendance
         const weekLabels = {{ week_labels|safe }};
         const ugData = {{ ug_weekly_attendance|safe }};
         const pgtData = {{ pgt_weekly_attendance|safe }};
@@ -286,8 +282,7 @@
                 labels: weekLabels,
                 datasets: [
                     {
-                        label: 'UG',
-                        data: ugData,
+                        label: 'UG', data: ugData,
                         borderColor: 'rgba(54, 162, 235, 1)',
                         backgroundColor: 'rgba(54, 162, 235, 0.15)',
                         pointBackgroundColor: 'rgba(54, 162, 235, 1)',
@@ -364,3 +359,6 @@
     </script>
 </body>
 </html>
+
+
+
