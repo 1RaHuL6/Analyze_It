@@ -87,9 +87,7 @@
             transition: transform 0.3s ease;
         }
 
-        .level:hover {
-            transform: translateY(-5px);
-        }
+        
 
         .dashboard-row {
             display: grid;
@@ -103,17 +101,22 @@
             color: white;
             border-radius: 12px;
             padding: 25px;
-            cursor: pointer;
+            cursor: default;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .widget-large:hover {
+        .interactive-row .widget-large {
+            cursor: pointer;
+        }
+
+        .interactive-row .widget-large:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.4);
         }
+
 
         .widget-header {
             font-size: 1.2em;
@@ -131,6 +134,20 @@
             opacity: 0.8;
             margin-top: 10px;
             color: #ccc;
+        }
+        .helper-text {
+            font-size: 0.85em;
+            color: #ff2e63;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .helper-arrow {
+            transition: transform 0.2s ease;
         }
 
         .widget-value {
@@ -152,16 +169,23 @@
             border-radius: 12px;
             padding: 20px;
             text-align: center;
-            cursor: pointer;
+            cursor: default;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
 
-        .widget-medium:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        .interactive-row .widget-large {
+            outline: 1px solid rgba(233,69,96,0);
+        }
+
+        .interactive-row .widget-large:hover .helper-arrow {
+            transform: translateX(4px);
+        }
+
+        .interactive-row .widget-large:hover {
+            outline-color: rgba(233,69,96,0.6);
         }
 
         @media (max-width: 768px) {
@@ -216,7 +240,7 @@
 
         <div class="level">
             <!-- First Row: UG and PGT Main -->
-            <div class="dashboard-row">
+            <div class="dashboard-row interactive-row">
                <a href="{% url 'analytics:ug_year_selection' %}" style="text-decoration: none; color: inherit;"> 
                 <div class="widget-large"style="cursor: pointer;">
                     <div class="widget-header">Undergraduate (UG)</div>
@@ -226,6 +250,7 @@
                         <div class="widget-details">
                             <span>Students: {{ ug_student_count }}</span> • <span>Courses: {{ ug_course_count }}</span>
                         </div>
+                        <div class="helper-text">Click here to drill down <span class="helper-arrow">→</span></div>
                     </div>
                 </div>
                </a> 
@@ -239,6 +264,7 @@
                         <div class="widget-details">
                             <span>Students: {{ pg_student_count}} </span> • <span>Courses: {{ pg_course_count }}</span>
                         </div>
+                        <div class="helper-text">Click here to drill down <span class="helper-arrow">→</span></div>
                     </div>
                 </a>
                 </div>

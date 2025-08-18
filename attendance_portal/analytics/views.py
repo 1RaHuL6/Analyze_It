@@ -280,11 +280,11 @@ def pg_year_selection(request):
             weekly_avg = round(sum(values) / len(values), 2) if values else 0
             weekly_attendance[week_label] = weekly_avg
 
-        # --- Dynamically calculate avg_attendance as mean of 4 weeks (ignore 0s) ---
+        # --- Dynamically calculate avg_attendance as mean of 4 weeks ---
         week_attendance_values = [v for v in weekly_attendance.values() if v > 0]
         avg_attendance = round(sum(week_attendance_values) / len(week_attendance_values), 2) if week_attendance_values else 0
 
-        # Count students with < 75% average attendance (keep as before)
+        # Count students with < 75% average attendance
         low_attendance_count = enrollments.filter(total_attendance_percent__lt=75).count()
 
         year_data.append({
@@ -300,10 +300,10 @@ def pg_year_selection(request):
             'attendance_values': [weekly_attendance.get(label, 0) for label in SNAPSHOT_LABELS.values()],
         })
 
-    # --- Build radar_data: weeks on axes, years as datasets (for PG) ---
+    
     week_labels = list(SNAPSHOT_LABELS.values())
     radar_data = {
-        'labels': week_labels,  # weeks on axes
+        'labels': week_labels,  # weeks on axis
         'datasets': []
     }
     for y in year_data:
@@ -351,7 +351,7 @@ def course_overview_by_year(request, year):
             values = [s.attendance_percent for s in snaps]
             avg = round(sum(values) / len(values), 2) if values else 0
             weekly_attendance.append(avg)
-        # Calculate avg_attendance as mean of 4 weeks (ignore 0s)
+        # Calculate avg_attendance as mean of 4 weeks
         nonzero = [v for v in weekly_attendance if v > 0]
         avg_attendance = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
         low_attendance_count = course_enrollments.filter(total_attendance_percent__lt=75).count()
@@ -407,7 +407,7 @@ def course_overview_by_year_pg(request, year):
             values = [s.attendance_percent for s in snaps]
             avg = round(sum(values) / len(values), 2) if values else 0
             weekly_attendance.append(avg)
-        # Calculate avg_attendance as mean of 4 weeks (ignore 0s)
+        # Calculate avg_attendance as mean of 4 weeks
         nonzero = [v for v in weekly_attendance if v > 0]
         avg_attendance = round(sum(nonzero) / len(nonzero), 2) if nonzero else 0
         low_attendance_count = course_enrollments.filter(total_attendance_percent__lt=75).count()
@@ -629,7 +629,7 @@ def student_attendance_details_pg(request, course_code, year, student_id):
         'student': student,
         'enrollment': enrollment,
         'year': year,
-        'student_attendance': student_attendance,  # Now using dynamically calculated value
+        'student_attendance': student_attendance,  
         'course_average': course_average,
         'difference': difference,
         'attended_sessions': attended_sessions,
