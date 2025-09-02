@@ -1,23 +1,24 @@
 services:
   - type: web
-    name: analyze-it
-    plan: free
+    name: attendance-portal-web
     env: python
     region: oregon
-    repo: 1RaHuL6/Analyze_It
-    repoBranch: main
-    # Point Render to the subdirectory that contains manage.py
-    path: attendance_portal
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
-    startCommand: "gunicorn attendance_portal.wsgi:application"
+    plan: free
+    runtime: python-3.11
+    buildCommand: "pip install -r requirements.txt && python attendance_portal/manage.py collectstatic --noinput"
+    startCommand: "gunicorn attendance_portal.attendance_portal.wsgi:application"
     envVars:
-      - key: SECRET_KEY
-        generateValue: true
       - key: DEBUG
         value: false
-    # We'll add DATABASE_URL later
+      - key: ALLOWED_HOSTS
+        value: "*.onrender.com"
+      - key: SECRET_KEY
+        generateValue: true
+    postDeployCommands:
+      - python attendance_portal/manage.py migrate
+    database: attendance-portal-db
 
 databases:
-  - name: analyzeit-postgres
-    databaseName: analyzeit_db
-    user: analyzeit_user
+  - name: attendance-portal-db
+    plan: free
+    region: oregon

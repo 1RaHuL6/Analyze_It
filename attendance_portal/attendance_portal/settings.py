@@ -32,10 +32,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c$#$5^rlln#6kyi421j85_@7cr!ek!k0bqf2kuhh)!a)oa0y5q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'analyze-it.onrender.com',       
+    '*.onrender.com',       
     'localhost',
     '127.0.0.1',
 ]
@@ -96,17 +96,22 @@ WSGI_APPLICATION = 'attendance_portal.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'analyzeit_db',           # Database name
-        'USER': 'user1',                # Username
-        'PASSWORD': 'user',        # Password
-        'HOST': 'localhost',             # Host
-        'PORT': '5432',                 
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'analyzeit_db',           # Database name
+#         'USER': 'user1',                # Username
+#         'PASSWORD': 'user',        # Password
+#         'HOST': 'localhost',             # Host
+#         'PORT': '5432',                 
+#     }
+# }
 
+import dj_database_url  
+
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
