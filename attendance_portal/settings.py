@@ -35,9 +35,10 @@ SECRET_KEY = 'django-insecure-c$#$5^rlln#6kyi421j85_@7cr!ek!k0bqf2kuhh)!a)oa0y5q
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    '*.onrender.com',       
     'localhost',
     '127.0.0.1',
+    'analyze-it-67dl.onrender.com',
+    '*.onrender.com',  # Allows all Render subdomains
 ]
 
 
