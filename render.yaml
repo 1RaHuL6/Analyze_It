@@ -6,7 +6,7 @@ services:
     plan: free
     runtime: python-3.11
     buildCommand: "pip install -r requirements.txt && python attendance_portal/manage.py collectstatic --noinput"
-    startCommand: "gunicorn attendance_portal.attendance_portal.wsgi:application"  # ✅ Fixed!
+    startCommand: "gunicorn attendance_portal.attendance_portal.wsgi:application"
     envVars:
       - key: DEBUG
         value: false
@@ -16,7 +16,7 @@ services:
         generateValue: true
     postDeployCommands:
       - python attendance_portal/manage.py migrate
-    database: attendance-portal-db
+    
 
 databases:
   - name: attendance-portal-db
