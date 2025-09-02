@@ -5,7 +5,7 @@ from .forms import CustomLoginForm
 from django.contrib import messages
 from .forms import StaffUserRegistrationForm
 from django.contrib.auth.models import User
-from analytics.views import dashboard  
+from attendance_portal.analytics.views import dashboard  
 
 #user id and password 
 

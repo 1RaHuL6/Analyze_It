@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from analytics.models import CourseTotalStats, Course
+from attendance_portal.analytics.models import CourseTotalStats, Course
 import pandas as pd
 import os
 

@@ -5,8 +5,8 @@ services:
     region: oregon
     plan: free
     runtime: python-3.11
-    buildCommand: "pip install -r requirements.txt && python attendance_portal/manage.py collectstatic --noinput"
-    startCommand: "gunicorn attendance_portal.attendance_portal.wsgi:application --bind 0.0.0.0:$PORT"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn attendance_portal.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
       - key: DEBUG
         value: false
@@ -15,7 +15,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
     postDeployCommands:
-      - python attendance_portal/manage.py migrate
+      - python manage.py migrate
 
 databases:
   - name: attendance-portal-db

@@ -17,7 +17,7 @@ env = environ.Env()
 environ.Env.read_env()  # Reads .env file if exists
 
 # Security
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY', default='django-insecure-c$#$5^rlln#6kyi421j85_@7cr!ek!k0bqf2kuhh)!a)oa0y5q')
 DEBUG = env('DEBUG', default=False)  # False by default
 from pathlib import Path
 
@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
-    'analytics',
+    'attendance_portal.accounts',
+    'attendance_portal.analytics',
     'django_extensions',
 ]
 
@@ -109,8 +109,10 @@ WSGI_APPLICATION = 'attendance_portal.wsgi.application'
 
 import dj_database_url  
 
+# Ensure SQLite path remains under BASE_DIR regardless of CWD
+_default_sqlite_url = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(default=_default_sqlite_url)
 }
 
 # Password validation

@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.utils.dateparse import parse_date, parse_datetime
-from analytics.models import AttendanceSnapshot, Enrollment
+from attendance_portal.analytics.models import AttendanceSnapshot, Enrollment
 import pandas as pd
 import os
 

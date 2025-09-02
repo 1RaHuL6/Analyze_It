@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from analytics.models import Student, Course, Enrollment
+from attendance_portal.analytics.models import Student, Course, Enrollment
 import pandas as pd
 
 class Command(BaseCommand):
