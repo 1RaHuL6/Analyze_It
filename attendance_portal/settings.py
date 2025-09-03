@@ -90,6 +90,7 @@ WSGI_APPLICATION = 'attendance_portal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# SQLITE 3 DB
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -97,24 +98,29 @@ WSGI_APPLICATION = 'attendance_portal.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'analyzeit_db',           # Database name
-#         'USER': 'user1',                # Username
-#         'PASSWORD': 'user',        # Password
-#         'HOST': 'localhost',             # Host
-#         'PORT': '5432',                 
-#     }
-# }
+# Postgre DB ------ Render
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'analyzeit_db',           # Database name
+        'USER': 'user1',                # Username
+        'PASSWORD': 'iykJulLnpXB6XKUPESjHWgwwBE6dnzJA',        # Password
+        'HOST': 'dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com',             # Host
+        'PORT': '5432',                 
+    }
+}
+# postgresql://user1:iykJulLnpXB6XKUPESjHWgwwBE6dnzJA@dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com/analyzeit_db
 
 import dj_database_url  
 
 # Ensure SQLite path remains under BASE_DIR regardless of CWD
-_default_sqlite_url = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
-DATABASES = {
-    'default': dj_database_url.config(default=_default_sqlite_url)
-}
+# _default_sqlite_url = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+# DATABASES = {
+#     'default': dj_database_url.config(default=_default_sqlite_url)
+# }
+
+# DATABASE["default"] = dj_database_url.parse("postgresql://user1:iykJulLnpXB6XKUPESjHWgwwBE6dnzJA@dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com/analyzeit_db") 
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
