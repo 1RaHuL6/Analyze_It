@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import environ
 import os
+from dotenv import load_dotenv                        
+import dj_database_url 
+from pathlib import Path
 
 # Initialize environ
 env = environ.Env()
@@ -19,7 +22,7 @@ environ.Env.read_env()  # Reads .env file if exists
 # Security
 SECRET_KEY = env('SECRET_KEY', default='django-insecure-c$#$5^rlln#6kyi421j85_@7cr!ek!k0bqf2kuhh)!a)oa0y5q')
 DEBUG = env('DEBUG', default=False)  # False by default
-from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,11 +31,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c$#$5^rlln#6kyi421j85_@7cr!ek!k0bqf2kuhh)!a)oa0y5q'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG') == '1'
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -98,20 +98,25 @@ WSGI_APPLICATION = 'attendance_portal.wsgi.application'
 #     }
 # }
 
-# Postgre DB ------ Render
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'analyzeit_db',           # Database name
-        'USER': 'user1',                # Username
-        'PASSWORD': 'iykJulLnpXB6XKUPESjHWgwwBE6dnzJA',        # Password
-        'HOST': 'dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com',             # Host
-        'PORT': '5432',                 
-    }
+    
+    # Azure db 
+    'default': dj_database_url.config(conn_max_age=600)
+    
+    # Postgre DB ------ Render
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'analyzeit_db',           # Database name
+    #     'USER': 'user1',                # Username
+    #     'PASSWORD': 'iykJulLnpXB6XKUPESjHWgwwBE6dnzJA',        # Password
+    #     'HOST': 'dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com',             # Host
+    #     'PORT': '5432',                 
+    # }
 }
 # postgresql://user1:iykJulLnpXB6XKUPESjHWgwwBE6dnzJA@dpg-d2rk2mh5pdvs73dm7560-a.oregon-postgres.render.com/analyzeit_db
 
-import dj_database_url  
+ 
 
 # Ensure SQLite path remains under BASE_DIR regardless of CWD
 # _default_sqlite_url = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"

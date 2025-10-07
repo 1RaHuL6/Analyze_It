@@ -1,0 +1,9002 @@
+[
+  {
+    "model": "analytics.student",
+    "pk": 4402,
+    "fields": {
+      "user_id": "43437412",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4403,
+    "fields": {
+      "user_id": "43402938",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4404,
+    "fields": {
+      "user_id": "43402808",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4405,
+    "fields": {
+      "user_id": "43402504",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4406,
+    "fields": {
+      "user_id": "42801536",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4407,
+    "fields": {
+      "user_id": "42808216",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4408,
+    "fields": {
+      "user_id": "43202338",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4409,
+    "fields": {
+      "user_id": "43202180",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4410,
+    "fields": {
+      "user_id": "43202596",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4411,
+    "fields": {
+      "user_id": "43009388",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4412,
+    "fields": {
+      "user_id": "43002102",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4413,
+    "fields": {
+      "user_id": "43202340",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4414,
+    "fields": {
+      "user_id": "43402858",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4415,
+    "fields": {
+      "user_id": "43402850",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4416,
+    "fields": {
+      "user_id": "43008486",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4417,
+    "fields": {
+      "user_id": "43433142",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4418,
+    "fields": {
+      "user_id": "43210120",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4419,
+    "fields": {
+      "user_id": "42805786",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4420,
+    "fields": {
+      "user_id": "43210172",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4421,
+    "fields": {
+      "user_id": "43411136",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4422,
+    "fields": {
+      "user_id": "43202692",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4423,
+    "fields": {
+      "user_id": "43439700",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4424,
+    "fields": {
+      "user_id": "43402564",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4425,
+    "fields": {
+      "user_id": "43433144",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4426,
+    "fields": {
+      "user_id": "43006788",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4427,
+    "fields": {
+      "user_id": "43210556",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4428,
+    "fields": {
+      "user_id": "43420764",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4429,
+    "fields": {
+      "user_id": "43202354",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4430,
+    "fields": {
+      "user_id": "43002278",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4431,
+    "fields": {
+      "user_id": "42805780",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4432,
+    "fields": {
+      "user_id": "43210160",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4433,
+    "fields": {
+      "user_id": "43009444",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4434,
+    "fields": {
+      "user_id": "43402928",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4435,
+    "fields": {
+      "user_id": "43438184",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4436,
+    "fields": {
+      "user_id": "42807820",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4437,
+    "fields": {
+      "user_id": "43002274",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4438,
+    "fields": {
+      "user_id": "43402918",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4439,
+    "fields": {
+      "user_id": "43202326",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4440,
+    "fields": {
+      "user_id": "42807702",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4441,
+    "fields": {
+      "user_id": "43009406",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4442,
+    "fields": {
+      "user_id": "43435394",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4443,
+    "fields": {
+      "user_id": "42807610",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4444,
+    "fields": {
+      "user_id": "43440476",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4445,
+    "fields": {
+      "user_id": "42807488",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4446,
+    "fields": {
+      "user_id": "43001974",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4447,
+    "fields": {
+      "user_id": "43202746",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4448,
+    "fields": {
+      "user_id": "43202734",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4449,
+    "fields": {
+      "user_id": "42807600",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4450,
+    "fields": {
+      "user_id": "43202744",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4451,
+    "fields": {
+      "user_id": "43202740",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4452,
+    "fields": {
+      "user_id": "43402540",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4453,
+    "fields": {
+      "user_id": "43202582",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4454,
+    "fields": {
+      "user_id": "43202558",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4455,
+    "fields": {
+      "user_id": "43009440",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4456,
+    "fields": {
+      "user_id": "43402914",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4457,
+    "fields": {
+      "user_id": "43402948",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4458,
+    "fields": {
+      "user_id": "43002282",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4459,
+    "fields": {
+      "user_id": "43402912",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4460,
+    "fields": {
+      "user_id": "42807218",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4461,
+    "fields": {
+      "user_id": "43409666",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4462,
+    "fields": {
+      "user_id": "43410906",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4463,
+    "fields": {
+      "user_id": "43202814",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4464,
+    "fields": {
+      "user_id": "42801436",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4465,
+    "fields": {
+      "user_id": "43408728",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4466,
+    "fields": {
+      "user_id": "43202390",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4467,
+    "fields": {
+      "user_id": "43006954",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4468,
+    "fields": {
+      "user_id": "43439808",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4469,
+    "fields": {
+      "user_id": "43002260",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4470,
+    "fields": {
+      "user_id": "43002248",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4471,
+    "fields": {
+      "user_id": "43402798",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4472,
+    "fields": {
+      "user_id": "43202730",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4473,
+    "fields": {
+      "user_id": "43402954",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4474,
+    "fields": {
+      "user_id": "42806802",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4475,
+    "fields": {
+      "user_id": "43202778",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4476,
+    "fields": {
+      "user_id": "43410444",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4477,
+    "fields": {
+      "user_id": "43210162",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4478,
+    "fields": {
+      "user_id": "43402898",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4479,
+    "fields": {
+      "user_id": "43435210",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4480,
+    "fields": {
+      "user_id": "43209350",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4481,
+    "fields": {
+      "user_id": "43001922",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4482,
+    "fields": {
+      "user_id": "43402864",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4483,
+    "fields": {
+      "user_id": "43202776",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4484,
+    "fields": {
+      "user_id": "42801668",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4485,
+    "fields": {
+      "user_id": "43202800",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4486,
+    "fields": {
+      "user_id": "43002104",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4487,
+    "fields": {
+      "user_id": "43409132",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4488,
+    "fields": {
+      "user_id": "43202594",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4489,
+    "fields": {
+      "user_id": "43202626",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4490,
+    "fields": {
+      "user_id": "43410010",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4491,
+    "fields": {
+      "user_id": "43437442",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4492,
+    "fields": {
+      "user_id": "43423136",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4493,
+    "fields": {
+      "user_id": "43402610",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4494,
+    "fields": {
+      "user_id": "43208794",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4495,
+    "fields": {
+      "user_id": "43402604",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4496,
+    "fields": {
+      "user_id": "43402574",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4497,
+    "fields": {
+      "user_id": "43202676",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4498,
+    "fields": {
+      "user_id": "43202434",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4499,
+    "fields": {
+      "user_id": "43409834",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4500,
+    "fields": {
+      "user_id": "43001928",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4501,
+    "fields": {
+      "user_id": "43005492",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4502,
+    "fields": {
+      "user_id": "42801456",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4503,
+    "fields": {
+      "user_id": "42806488",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4504,
+    "fields": {
+      "user_id": "43409102",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4505,
+    "fields": {
+      "user_id": "43402470",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4506,
+    "fields": {
+      "user_id": "43202420",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4507,
+    "fields": {
+      "user_id": "43402788",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4508,
+    "fields": {
+      "user_id": "42003972",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4509,
+    "fields": {
+      "user_id": "42804418",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4510,
+    "fields": {
+      "user_id": "43402944",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4511,
+    "fields": {
+      "user_id": "43402642",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4512,
+    "fields": {
+      "user_id": "43209622",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4513,
+    "fields": {
+      "user_id": "43409110",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4514,
+    "fields": {
+      "user_id": "43002218",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4515,
+    "fields": {
+      "user_id": "43428044",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4516,
+    "fields": {
+      "user_id": "43437262",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4517,
+    "fields": {
+      "user_id": "43001840",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4518,
+    "fields": {
+      "user_id": "42806254",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4519,
+    "fields": {
+      "user_id": "43402598",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4520,
+    "fields": {
+      "user_id": "43436874",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4521,
+    "fields": {
+      "user_id": "42807946",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4522,
+    "fields": {
+      "user_id": "43001806",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4523,
+    "fields": {
+      "user_id": "43007094",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4524,
+    "fields": {
+      "user_id": "43002098",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4525,
+    "fields": {
+      "user_id": "43008150",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4526,
+    "fields": {
+      "user_id": "43208896",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4527,
+    "fields": {
+      "user_id": "43408720",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4528,
+    "fields": {
+      "user_id": "43402672",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4529,
+    "fields": {
+      "user_id": "43007038",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4530,
+    "fields": {
+      "user_id": "42800462",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4531,
+    "fields": {
+      "user_id": "43418770",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4532,
+    "fields": {
+      "user_id": "43439936",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4533,
+    "fields": {
+      "user_id": "43402792",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4534,
+    "fields": {
+      "user_id": "43435792",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4535,
+    "fields": {
+      "user_id": "43001828",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4536,
+    "fields": {
+      "user_id": "43202616",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4537,
+    "fields": {
+      "user_id": "43409118",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4538,
+    "fields": {
+      "user_id": "43411030",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4539,
+    "fields": {
+      "user_id": "43001998",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4540,
+    "fields": {
+      "user_id": "43437458",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4541,
+    "fields": {
+      "user_id": "43402690",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4542,
+    "fields": {
+      "user_id": "43202562",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4543,
+    "fields": {
+      "user_id": "43002120",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4544,
+    "fields": {
+      "user_id": "43002036",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4545,
+    "fields": {
+      "user_id": "42801730",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4546,
+    "fields": {
+      "user_id": "42801506",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4547,
+    "fields": {
+      "user_id": "43202680",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4548,
+    "fields": {
+      "user_id": "43002160",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4549,
+    "fields": {
+      "user_id": "42806822",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4550,
+    "fields": {
+      "user_id": "42801370",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4551,
+    "fields": {
+      "user_id": "43440588",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4552,
+    "fields": {
+      "user_id": "43402868",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4553,
+    "fields": {
+      "user_id": "43007522",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4554,
+    "fields": {
+      "user_id": "43007054",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4555,
+    "fields": {
+      "user_id": "43402412",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4556,
+    "fields": {
+      "user_id": "42801704",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4557,
+    "fields": {
+      "user_id": "43208420",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4558,
+    "fields": {
+      "user_id": "42801478",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4559,
+    "fields": {
+      "user_id": "43434492",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4560,
+    "fields": {
+      "user_id": "43009300",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4561,
+    "fields": {
+      "user_id": "43008126",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4562,
+    "fields": {
+      "user_id": "43402718",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4563,
+    "fields": {
+      "user_id": "43408706",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4564,
+    "fields": {
+      "user_id": "42801662",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4565,
+    "fields": {
+      "user_id": "42801634",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4566,
+    "fields": {
+      "user_id": "42801496",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4567,
+    "fields": {
+      "user_id": "43001994",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4568,
+    "fields": {
+      "user_id": "43006964",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4569,
+    "fields": {
+      "user_id": "43402476",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4570,
+    "fields": {
+      "user_id": "43402418",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4571,
+    "fields": {
+      "user_id": "43202160",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4572,
+    "fields": {
+      "user_id": "43202358",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4573,
+    "fields": {
+      "user_id": "42806826",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4574,
+    "fields": {
+      "user_id": "43402744",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4575,
+    "fields": {
+      "user_id": "43002140",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4576,
+    "fields": {
+      "user_id": "43402630",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4577,
+    "fields": {
+      "user_id": "42801528",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4578,
+    "fields": {
+      "user_id": "43436594",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4579,
+    "fields": {
+      "user_id": "43402600",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4580,
+    "fields": {
+      "user_id": "43008946",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4581,
+    "fields": {
+      "user_id": "43202610",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4582,
+    "fields": {
+      "user_id": "43002238",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4583,
+    "fields": {
+      "user_id": "43436542",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4584,
+    "fields": {
+      "user_id": "43402516",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4585,
+    "fields": {
+      "user_id": "43402680",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4586,
+    "fields": {
+      "user_id": "43209316",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4587,
+    "fields": {
+      "user_id": "42604212",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4588,
+    "fields": {
+      "user_id": "42801498",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4589,
+    "fields": {
+      "user_id": "43409138",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4590,
+    "fields": {
+      "user_id": "43209020",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4591,
+    "fields": {
+      "user_id": "43002178",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4592,
+    "fields": {
+      "user_id": "42801682",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4593,
+    "fields": {
+      "user_id": "43402426",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4594,
+    "fields": {
+      "user_id": "43402908",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4595,
+    "fields": {
+      "user_id": "43002028",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4596,
+    "fields": {
+      "user_id": "43408742",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4597,
+    "fields": {
+      "user_id": "42604372",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4598,
+    "fields": {
+      "user_id": "43007990",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4599,
+    "fields": {
+      "user_id": "43409854",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4600,
+    "fields": {
+      "user_id": "43202598",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4601,
+    "fields": {
+      "user_id": "43006938",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4602,
+    "fields": {
+      "user_id": "43209532",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4603,
+    "fields": {
+      "user_id": "43202468",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4604,
+    "fields": {
+      "user_id": "43202622",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4605,
+    "fields": {
+      "user_id": "43408426",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4606,
+    "fields": {
+      "user_id": "43202760",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4607,
+    "fields": {
+      "user_id": "42808114",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4608,
+    "fields": {
+      "user_id": "43001896",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4609,
+    "fields": {
+      "user_id": "43208476",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4610,
+    "fields": {
+      "user_id": "43208974",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4611,
+    "fields": {
+      "user_id": "43001912",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4612,
+    "fields": {
+      "user_id": "43209328",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4613,
+    "fields": {
+      "user_id": "43202668",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4614,
+    "fields": {
+      "user_id": "43002012",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4615,
+    "fields": {
+      "user_id": "43435674",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4616,
+    "fields": {
+      "user_id": "43402422",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4617,
+    "fields": {
+      "user_id": "43001842",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4618,
+    "fields": {
+      "user_id": "43401650",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4619,
+    "fields": {
+      "user_id": "42801650",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4620,
+    "fields": {
+      "user_id": "42801410",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4621,
+    "fields": {
+      "user_id": "42806998",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4622,
+    "fields": {
+      "user_id": "43410718",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4623,
+    "fields": {
+      "user_id": "43402884",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4624,
+    "fields": {
+      "user_id": "42606284",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4625,
+    "fields": {
+      "user_id": "43409158",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4626,
+    "fields": {
+      "user_id": "43402736",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4627,
+    "fields": {
+      "user_id": "43402686",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4628,
+    "fields": {
+      "user_id": "43002022",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4629,
+    "fields": {
+      "user_id": "42801654",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4630,
+    "fields": {
+      "user_id": "43402786",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4631,
+    "fields": {
+      "user_id": "43410116",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4632,
+    "fields": {
+      "user_id": "43410596",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4633,
+    "fields": {
+      "user_id": "42608084",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4634,
+    "fields": {
+      "user_id": "43433632",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4635,
+    "fields": {
+      "user_id": "43210164",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4636,
+    "fields": {
+      "user_id": "43433824",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4637,
+    "fields": {
+      "user_id": "43210772",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4638,
+    "fields": {
+      "user_id": "43440074",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4639,
+    "fields": {
+      "user_id": "43001988",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4640,
+    "fields": {
+      "user_id": "43009370",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4641,
+    "fields": {
+      "user_id": "43402848",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4642,
+    "fields": {
+      "user_id": "43008214",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4643,
+    "fields": {
+      "user_id": "43435474",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4644,
+    "fields": {
+      "user_id": "43202604",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4645,
+    "fields": {
+      "user_id": "43202710",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4646,
+    "fields": {
+      "user_id": "43409108",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4647,
+    "fields": {
+      "user_id": "42801750",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4648,
+    "fields": {
+      "user_id": "43402872",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4649,
+    "fields": {
+      "user_id": "42801600",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4650,
+    "fields": {
+      "user_id": "43001952",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4651,
+    "fields": {
+      "user_id": "43402660",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4652,
+    "fields": {
+      "user_id": "43402608",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4653,
+    "fields": {
+      "user_id": "43402474",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4654,
+    "fields": {
+      "user_id": "43402688",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4655,
+    "fields": {
+      "user_id": "42604078",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4656,
+    "fields": {
+      "user_id": "43208686",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4657,
+    "fields": {
+      "user_id": "43007974",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4658,
+    "fields": {
+      "user_id": "43006928",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4659,
+    "fields": {
+      "user_id": "43402482",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4660,
+    "fields": {
+      "user_id": "42801712",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4661,
+    "fields": {
+      "user_id": "43002164",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4662,
+    "fields": {
+      "user_id": "43402572",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4663,
+    "fields": {
+      "user_id": "43402740",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4664,
+    "fields": {
+      "user_id": "43001848",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4665,
+    "fields": {
+      "user_id": "43202218",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4666,
+    "fields": {
+      "user_id": "43408428",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4667,
+    "fields": {
+      "user_id": "43202428",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4668,
+    "fields": {
+      "user_id": "43007012",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4669,
+    "fields": {
+      "user_id": "43001986",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4670,
+    "fields": {
+      "user_id": "42801512",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4671,
+    "fields": {
+      "user_id": "43202274",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4672,
+    "fields": {
+      "user_id": "43202628",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4673,
+    "fields": {
+      "user_id": "43002020",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4674,
+    "fields": {
+      "user_id": "43409172",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4675,
+    "fields": {
+      "user_id": "43007744",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4676,
+    "fields": {
+      "user_id": "43408708",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4677,
+    "fields": {
+      "user_id": "43429912",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4678,
+    "fields": {
+      "user_id": "43202316",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4679,
+    "fields": {
+      "user_id": "43006794",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4680,
+    "fields": {
+      "user_id": "42805776",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4681,
+    "fields": {
+      "user_id": "43002094",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4682,
+    "fields": {
+      "user_id": "43409790",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4683,
+    "fields": {
+      "user_id": "43410014",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4684,
+    "fields": {
+      "user_id": "43207232",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4685,
+    "fields": {
+      "user_id": "43001992",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4686,
+    "fields": {
+      "user_id": "43202614",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4687,
+    "fields": {
+      "user_id": "43402532",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4688,
+    "fields": {
+      "user_id": "43402506",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4689,
+    "fields": {
+      "user_id": "42807378",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4690,
+    "fields": {
+      "user_id": "43409130",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4691,
+    "fields": {
+      "user_id": "43402538",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4692,
+    "fields": {
+      "user_id": "43202500",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4693,
+    "fields": {
+      "user_id": "43202768",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4694,
+    "fields": {
+      "user_id": "43410720",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4695,
+    "fields": {
+      "user_id": "43409166",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4696,
+    "fields": {
+      "user_id": "43008040",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4697,
+    "fields": {
+      "user_id": "43202166",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4698,
+    "fields": {
+      "user_id": "43402622",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4699,
+    "fields": {
+      "user_id": "43402890",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4700,
+    "fields": {
+      "user_id": "43202552",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4701,
+    "fields": {
+      "user_id": "43402394",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4702,
+    "fields": {
+      "user_id": "43402694",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4703,
+    "fields": {
+      "user_id": "43006990",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4704,
+    "fields": {
+      "user_id": "43402668",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4705,
+    "fields": {
+      "user_id": "42801768",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4706,
+    "fields": {
+      "user_id": "43402436",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4707,
+    "fields": {
+      "user_id": "43402802",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4708,
+    "fields": {
+      "user_id": "43002138",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4709,
+    "fields": {
+      "user_id": "43402666",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4710,
+    "fields": {
+      "user_id": "42807226",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4711,
+    "fields": {
+      "user_id": "43402648",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4712,
+    "fields": {
+      "user_id": "43402778",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4713,
+    "fields": {
+      "user_id": "43409672",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4714,
+    "fields": {
+      "user_id": "43402756",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4715,
+    "fields": {
+      "user_id": "43435108",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4716,
+    "fields": {
+      "user_id": "43430302",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4717,
+    "fields": {
+      "user_id": "43202700",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4718,
+    "fields": {
+      "user_id": "43409804",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4719,
+    "fields": {
+      "user_id": "43409134",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4720,
+    "fields": {
+      "user_id": "43408698",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4721,
+    "fields": {
+      "user_id": "43408740",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4722,
+    "fields": {
+      "user_id": "43202398",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4723,
+    "fields": {
+      "user_id": "42801728",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4724,
+    "fields": {
+      "user_id": "43209168",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4725,
+    "fields": {
+      "user_id": "43438618",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4726,
+    "fields": {
+      "user_id": "43437530",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4727,
+    "fields": {
+      "user_id": "43002200",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4728,
+    "fields": {
+      "user_id": "43008942",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4729,
+    "fields": {
+      "user_id": "43202496",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4730,
+    "fields": {
+      "user_id": "42801450",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4731,
+    "fields": {
+      "user_id": "43002206",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4732,
+    "fields": {
+      "user_id": "43202782",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4733,
+    "fields": {
+      "user_id": "43439070",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4734,
+    "fields": {
+      "user_id": "43202572",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4735,
+    "fields": {
+      "user_id": "43008660",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4736,
+    "fields": {
+      "user_id": "43208962",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4737,
+    "fields": {
+      "user_id": "43202252",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4738,
+    "fields": {
+      "user_id": "43402444",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4739,
+    "fields": {
+      "user_id": "43202828",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4740,
+    "fields": {
+      "user_id": "43001920",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4741,
+    "fields": {
+      "user_id": "43202754",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4742,
+    "fields": {
+      "user_id": "43402886",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4743,
+    "fields": {
+      "user_id": "42602392",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4744,
+    "fields": {
+      "user_id": "43402612",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4745,
+    "fields": {
+      "user_id": "43202162",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4746,
+    "fields": {
+      "user_id": "43001860",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4747,
+    "fields": {
+      "user_id": "43202282",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4748,
+    "fields": {
+      "user_id": "43409784",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4749,
+    "fields": {
+      "user_id": "43001822",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4750,
+    "fields": {
+      "user_id": "43202534",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4751,
+    "fields": {
+      "user_id": "43202720",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4752,
+    "fields": {
+      "user_id": "43410082",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4753,
+    "fields": {
+      "user_id": "43202308",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4754,
+    "fields": {
+      "user_id": "43001978",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4755,
+    "fields": {
+      "user_id": "43002272",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4756,
+    "fields": {
+      "user_id": "43208144",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4757,
+    "fields": {
+      "user_id": "43402484",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4758,
+    "fields": {
+      "user_id": "43006762",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4759,
+    "fields": {
+      "user_id": "43410634",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4760,
+    "fields": {
+      "user_id": "43202192",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4761,
+    "fields": {
+      "user_id": "43002078",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4762,
+    "fields": {
+      "user_id": "43409122",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4763,
+    "fields": {
+      "user_id": "43202320",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4764,
+    "fields": {
+      "user_id": "43202824",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4765,
+    "fields": {
+      "user_id": "42805700",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4766,
+    "fields": {
+      "user_id": "43202254",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4767,
+    "fields": {
+      "user_id": "42604092",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4768,
+    "fields": {
+      "user_id": "43410832",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4769,
+    "fields": {
+      "user_id": "43202650",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4770,
+    "fields": {
+      "user_id": "43234788",
+      "level_of_study": "PGT",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4771,
+    "fields": {
+      "user_id": "43202752",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4772,
+    "fields": {
+      "user_id": "43202666",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4773,
+    "fields": {
+      "user_id": "42806704",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4774,
+    "fields": {
+      "user_id": "43202300",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4775,
+    "fields": {
+      "user_id": "43202288",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4776,
+    "fields": {
+      "user_id": "43009734",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4777,
+    "fields": {
+      "user_id": "43001836",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4778,
+    "fields": {
+      "user_id": "42806446",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4779,
+    "fields": {
+      "user_id": "43006802",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4780,
+    "fields": {
+      "user_id": "43408724",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4781,
+    "fields": {
+      "user_id": "42801504",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4782,
+    "fields": {
+      "user_id": "43010288",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4783,
+    "fields": {
+      "user_id": "43227044",
+      "level_of_study": "PGT",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4784,
+    "fields": {
+      "user_id": "43202638",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4785,
+    "fields": {
+      "user_id": "43408994",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4786,
+    "fields": {
+      "user_id": "42801396",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4787,
+    "fields": {
+      "user_id": "43402424",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4788,
+    "fields": {
+      "user_id": "43402448",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4789,
+    "fields": {
+      "user_id": "43402656",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4790,
+    "fields": {
+      "user_id": "43402570",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4791,
+    "fields": {
+      "user_id": "43202334",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4792,
+    "fields": {
+      "user_id": "43008254",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4793,
+    "fields": {
+      "user_id": "43002050",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4794,
+    "fields": {
+      "user_id": "43408712",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4795,
+    "fields": {
+      "user_id": "43002144",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4796,
+    "fields": {
+      "user_id": "43209402",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4797,
+    "fields": {
+      "user_id": "43202454",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4798,
+    "fields": {
+      "user_id": "43202470",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4799,
+    "fields": {
+      "user_id": "43007088",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4800,
+    "fields": {
+      "user_id": "43001798",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4801,
+    "fields": {
+      "user_id": "43437380",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4802,
+    "fields": {
+      "user_id": "42806378",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4803,
+    "fields": {
+      "user_id": "43202750",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4804,
+    "fields": {
+      "user_id": "43002086",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4805,
+    "fields": {
+      "user_id": "43007612",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4806,
+    "fields": {
+      "user_id": "43209356",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4807,
+    "fields": {
+      "user_id": "43002044",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4808,
+    "fields": {
+      "user_id": "43209176",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4809,
+    "fields": {
+      "user_id": "42801452",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4810,
+    "fields": {
+      "user_id": "43009188",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4811,
+    "fields": {
+      "user_id": "43202382",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4812,
+    "fields": {
+      "user_id": "43402816",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4813,
+    "fields": {
+      "user_id": "43410592",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4814,
+    "fields": {
+      "user_id": "43006826",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4815,
+    "fields": {
+      "user_id": "43008268",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4816,
+    "fields": {
+      "user_id": "43434946",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4817,
+    "fields": {
+      "user_id": "43202818",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4818,
+    "fields": {
+      "user_id": "43434128",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4819,
+    "fields": {
+      "user_id": "43208098",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4820,
+    "fields": {
+      "user_id": "43409832",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4821,
+    "fields": {
+      "user_id": "42801426",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4822,
+    "fields": {
+      "user_id": "43002292",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4823,
+    "fields": {
+      "user_id": "43436588",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4824,
+    "fields": {
+      "user_id": "43402478",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4825,
+    "fields": {
+      "user_id": "42801566",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4826,
+    "fields": {
+      "user_id": "43202526",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4827,
+    "fields": {
+      "user_id": "43002106",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4828,
+    "fields": {
+      "user_id": "43208538",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4829,
+    "fields": {
+      "user_id": "42801696",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4830,
+    "fields": {
+      "user_id": "43008720",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4831,
+    "fields": {
+      "user_id": "42606704",
+      "level_of_study": "UG",
+      "year_of_course": 5
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4832,
+    "fields": {
+      "user_id": "43402428",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4833,
+    "fields": {
+      "user_id": "42801726",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4834,
+    "fields": {
+      "user_id": "42801582",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4835,
+    "fields": {
+      "user_id": "43402442",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4836,
+    "fields": {
+      "user_id": "43402790",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4837,
+    "fields": {
+      "user_id": "43402812",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4838,
+    "fields": {
+      "user_id": "42801586",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4839,
+    "fields": {
+      "user_id": "43202606",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4840,
+    "fields": {
+      "user_id": "43202608",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4841,
+    "fields": {
+      "user_id": "43439704",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4842,
+    "fields": {
+      "user_id": "43402568",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4843,
+    "fields": {
+      "user_id": "43202408",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4844,
+    "fields": {
+      "user_id": "43402556",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4845,
+    "fields": {
+      "user_id": "43408722",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4846,
+    "fields": {
+      "user_id": "43202188",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4847,
+    "fields": {
+      "user_id": "43002240",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4848,
+    "fields": {
+      "user_id": "43202240",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4849,
+    "fields": {
+      "user_id": "43202684",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4850,
+    "fields": {
+      "user_id": "43410740",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4851,
+    "fields": {
+      "user_id": "43008188",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4852,
+    "fields": {
+      "user_id": "43428320",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4853,
+    "fields": {
+      "user_id": "43402602",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4854,
+    "fields": {
+      "user_id": "43209642",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4855,
+    "fields": {
+      "user_id": "42801596",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4856,
+    "fields": {
+      "user_id": "43402494",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4857,
+    "fields": {
+      "user_id": "43402486",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4858,
+    "fields": {
+      "user_id": "43002118",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4859,
+    "fields": {
+      "user_id": "43001800",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4860,
+    "fields": {
+      "user_id": "43001890",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4861,
+    "fields": {
+      "user_id": "43006780",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4862,
+    "fields": {
+      "user_id": "43408992",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4863,
+    "fields": {
+      "user_id": "43402742",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4864,
+    "fields": {
+      "user_id": "43007856",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4865,
+    "fields": {
+      "user_id": "43202172",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4866,
+    "fields": {
+      "user_id": "43002126",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4867,
+    "fields": {
+      "user_id": "42801700",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4868,
+    "fields": {
+      "user_id": "42604198",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4869,
+    "fields": {
+      "user_id": "43008850",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4870,
+    "fields": {
+      "user_id": "43437054",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4871,
+    "fields": {
+      "user_id": "43002168",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4872,
+    "fields": {
+      "user_id": "42801476",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4873,
+    "fields": {
+      "user_id": "43008236",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4874,
+    "fields": {
+      "user_id": "43202636",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4875,
+    "fields": {
+      "user_id": "43409850",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4876,
+    "fields": {
+      "user_id": "43402752",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4877,
+    "fields": {
+      "user_id": "43006800",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4878,
+    "fields": {
+      "user_id": "43001832",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4879,
+    "fields": {
+      "user_id": "43002222",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4880,
+    "fields": {
+      "user_id": "43202280",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4881,
+    "fields": {
+      "user_id": "43408736",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4882,
+    "fields": {
+      "user_id": "43408738",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4883,
+    "fields": {
+      "user_id": "43008762",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4884,
+    "fields": {
+      "user_id": "43006782",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4885,
+    "fields": {
+      "user_id": "42801550",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4886,
+    "fields": {
+      "user_id": "43008382",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4887,
+    "fields": {
+      "user_id": "43402536",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4888,
+    "fields": {
+      "user_id": "43202806",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4889,
+    "fields": {
+      "user_id": "43202186",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4890,
+    "fields": {
+      "user_id": "42604070",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4891,
+    "fields": {
+      "user_id": "43402698",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4892,
+    "fields": {
+      "user_id": "43002174",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4893,
+    "fields": {
+      "user_id": "42807168",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4894,
+    "fields": {
+      "user_id": "43402892",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4895,
+    "fields": {
+      "user_id": "43402700",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4896,
+    "fields": {
+      "user_id": "43402760",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4897,
+    "fields": {
+      "user_id": "43402638",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4898,
+    "fields": {
+      "user_id": "43402636",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4899,
+    "fields": {
+      "user_id": "43402460",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4900,
+    "fields": {
+      "user_id": "43208280",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4901,
+    "fields": {
+      "user_id": "43402544",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4902,
+    "fields": {
+      "user_id": "43427984",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4903,
+    "fields": {
+      "user_id": "43435896",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4904,
+    "fields": {
+      "user_id": "43424708",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4905,
+    "fields": {
+      "user_id": "43420288",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4906,
+    "fields": {
+      "user_id": "43424054",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4907,
+    "fields": {
+      "user_id": "43208508",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4908,
+    "fields": {
+      "user_id": "43202230",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4909,
+    "fields": {
+      "user_id": "42604152",
+      "level_of_study": "UG",
+      "year_of_course": 5
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4910,
+    "fields": {
+      "user_id": "43002064",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4911,
+    "fields": {
+      "user_id": "43410188",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4912,
+    "fields": {
+      "user_id": "43002210",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4913,
+    "fields": {
+      "user_id": "43210098",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4914,
+    "fields": {
+      "user_id": "43402936",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4915,
+    "fields": {
+      "user_id": "43002130",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4916,
+    "fields": {
+      "user_id": "43007768",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4917,
+    "fields": {
+      "user_id": "43402446",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4918,
+    "fields": {
+      "user_id": "43001942",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4919,
+    "fields": {
+      "user_id": "42806564",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4920,
+    "fields": {
+      "user_id": "43202766",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4921,
+    "fields": {
+      "user_id": "43007910",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4922,
+    "fields": {
+      "user_id": "43402496",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4923,
+    "fields": {
+      "user_id": "43409880",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4924,
+    "fields": {
+      "user_id": "43202364",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4925,
+    "fields": {
+      "user_id": "43418880",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4926,
+    "fields": {
+      "user_id": "42801610",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4927,
+    "fields": {
+      "user_id": "42801740",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4928,
+    "fields": {
+      "user_id": "43208406",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4929,
+    "fields": {
+      "user_id": "43402862",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4930,
+    "fields": {
+      "user_id": "43006818",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4931,
+    "fields": {
+      "user_id": "43208804",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4932,
+    "fields": {
+      "user_id": "43210478",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4933,
+    "fields": {
+      "user_id": "43008954",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4934,
+    "fields": {
+      "user_id": "43001876",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4935,
+    "fields": {
+      "user_id": "43209238",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4936,
+    "fields": {
+      "user_id": "43208740",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4937,
+    "fields": {
+      "user_id": "42801732",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4938,
+    "fields": {
+      "user_id": "43202804",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4939,
+    "fields": {
+      "user_id": "43410174",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4940,
+    "fields": {
+      "user_id": "43208790",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4941,
+    "fields": {
+      "user_id": "43440622",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4942,
+    "fields": {
+      "user_id": "43202592",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4943,
+    "fields": {
+      "user_id": "43002194",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4944,
+    "fields": {
+      "user_id": "43002230",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4945,
+    "fields": {
+      "user_id": "43409154",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4946,
+    "fields": {
+      "user_id": "43411048",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4947,
+    "fields": {
+      "user_id": "43002054",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4948,
+    "fields": {
+      "user_id": "43436202",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4949,
+    "fields": {
+      "user_id": "43433862",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4950,
+    "fields": {
+      "user_id": "43402906",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4951,
+    "fields": {
+      "user_id": "43426186",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4952,
+    "fields": {
+      "user_id": "43432802",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4953,
+    "fields": {
+      "user_id": "43002142",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4954,
+    "fields": {
+      "user_id": "43002152",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4955,
+    "fields": {
+      "user_id": "42801534",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4956,
+    "fields": {
+      "user_id": "43402458",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4957,
+    "fields": {
+      "user_id": "43007992",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4958,
+    "fields": {
+      "user_id": "43202556",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4959,
+    "fields": {
+      "user_id": "43209692",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4960,
+    "fields": {
+      "user_id": "43402820",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4961,
+    "fields": {
+      "user_id": "43202310",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4962,
+    "fields": {
+      "user_id": "42801644",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4963,
+    "fields": {
+      "user_id": "43402684",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4964,
+    "fields": {
+      "user_id": "43402946",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4965,
+    "fields": {
+      "user_id": "43402466",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4966,
+    "fields": {
+      "user_id": "43209560",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4967,
+    "fields": {
+      "user_id": "43008362",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4968,
+    "fields": {
+      "user_id": "43402748",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4969,
+    "fields": {
+      "user_id": "43434716",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4970,
+    "fields": {
+      "user_id": "43402782",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4971,
+    "fields": {
+      "user_id": "43001954",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4972,
+    "fields": {
+      "user_id": "43202736",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4973,
+    "fields": {
+      "user_id": "42801734",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4974,
+    "fields": {
+      "user_id": "43436270",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4975,
+    "fields": {
+      "user_id": "43202366",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4976,
+    "fields": {
+      "user_id": "43209782",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4977,
+    "fields": {
+      "user_id": "43002088",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4978,
+    "fields": {
+      "user_id": "43402594",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4979,
+    "fields": {
+      "user_id": "43202182",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4980,
+    "fields": {
+      "user_id": "43202448",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4981,
+    "fields": {
+      "user_id": "43402438",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4982,
+    "fields": {
+      "user_id": "43402620",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4983,
+    "fields": {
+      "user_id": "43202646",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4984,
+    "fields": {
+      "user_id": "43438986",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4985,
+    "fields": {
+      "user_id": "43410768",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4986,
+    "fields": {
+      "user_id": "43007098",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4987,
+    "fields": {
+      "user_id": "43402434",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4988,
+    "fields": {
+      "user_id": "43010024",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4989,
+    "fields": {
+      "user_id": "43202706",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4990,
+    "fields": {
+      "user_id": "43202504",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4991,
+    "fields": {
+      "user_id": "43002250",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4992,
+    "fields": {
+      "user_id": "43402896",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4993,
+    "fields": {
+      "user_id": "43006730",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4994,
+    "fields": {
+      "user_id": "43402734",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4995,
+    "fields": {
+      "user_id": "43006856",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4996,
+    "fields": {
+      "user_id": "43409150",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4997,
+    "fields": {
+      "user_id": "42801462",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4998,
+    "fields": {
+      "user_id": "43409120",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4999,
+    "fields": {
+      "user_id": "43410276",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5000,
+    "fields": {
+      "user_id": "43001938",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5001,
+    "fields": {
+      "user_id": "43202486",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5002,
+    "fields": {
+      "user_id": "43402550",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5003,
+    "fields": {
+      "user_id": "42604060",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5004,
+    "fields": {
+      "user_id": "43409752",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5005,
+    "fields": {
+      "user_id": "42801412",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5006,
+    "fields": {
+      "user_id": "43202620",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5007,
+    "fields": {
+      "user_id": "43402844",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5008,
+    "fields": {
+      "user_id": "43202714",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5009,
+    "fields": {
+      "user_id": "43002262",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5010,
+    "fields": {
+      "user_id": "42807084",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5011,
+    "fields": {
+      "user_id": "43402580",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5012,
+    "fields": {
+      "user_id": "43402750",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5013,
+    "fields": {
+      "user_id": "43001888",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5014,
+    "fields": {
+      "user_id": "43208136",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5015,
+    "fields": {
+      "user_id": "43007534",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5016,
+    "fields": {
+      "user_id": "43402772",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5017,
+    "fields": {
+      "user_id": "43402560",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5018,
+    "fields": {
+      "user_id": "43425522",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5019,
+    "fields": {
+      "user_id": "43208800",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5020,
+    "fields": {
+      "user_id": "43002026",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5021,
+    "fields": {
+      "user_id": "43008824",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5022,
+    "fields": {
+      "user_id": "43001812",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5023,
+    "fields": {
+      "user_id": "43435672",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5024,
+    "fields": {
+      "user_id": "43432744",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5025,
+    "fields": {
+      "user_id": "43009488",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5026,
+    "fields": {
+      "user_id": "43408090",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5027,
+    "fields": {
+      "user_id": "43207434",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5028,
+    "fields": {
+      "user_id": "43402456",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5029,
+    "fields": {
+      "user_id": "43434812",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5030,
+    "fields": {
+      "user_id": "43202756",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5031,
+    "fields": {
+      "user_id": "43409136",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5032,
+    "fields": {
+      "user_id": "43402832",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5033,
+    "fields": {
+      "user_id": "43202346",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5034,
+    "fields": {
+      "user_id": "43402420",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5035,
+    "fields": {
+      "user_id": "43008158",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5036,
+    "fields": {
+      "user_id": "43202174",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5037,
+    "fields": {
+      "user_id": "43398650",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5038,
+    "fields": {
+      "user_id": "43432576",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5039,
+    "fields": {
+      "user_id": "43202368",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5040,
+    "fields": {
+      "user_id": "43437164",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5041,
+    "fields": {
+      "user_id": "43202440",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5042,
+    "fields": {
+      "user_id": "43402870",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5043,
+    "fields": {
+      "user_id": "43209602",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5044,
+    "fields": {
+      "user_id": "43436206",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5045,
+    "fields": {
+      "user_id": "43402704",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5046,
+    "fields": {
+      "user_id": "43402716",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5047,
+    "fields": {
+      "user_id": "43402952",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5048,
+    "fields": {
+      "user_id": "43202704",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5049,
+    "fields": {
+      "user_id": "43007736",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5050,
+    "fields": {
+      "user_id": "43202742",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5051,
+    "fields": {
+      "user_id": "43202392",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5052,
+    "fields": {
+      "user_id": "43408694",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5053,
+    "fields": {
+      "user_id": "43202422",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5054,
+    "fields": {
+      "user_id": "43410836",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5055,
+    "fields": {
+      "user_id": "43402888",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5056,
+    "fields": {
+      "user_id": "43440618",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5057,
+    "fields": {
+      "user_id": "43202836",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5058,
+    "fields": {
+      "user_id": "43402852",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5059,
+    "fields": {
+      "user_id": "43430100",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5060,
+    "fields": {
+      "user_id": "42801374",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5061,
+    "fields": {
+      "user_id": "43202784",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5062,
+    "fields": {
+      "user_id": "43431686",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5063,
+    "fields": {
+      "user_id": "43202328",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5064,
+    "fields": {
+      "user_id": "43001926",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5065,
+    "fields": {
+      "user_id": "43009548",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5066,
+    "fields": {
+      "user_id": "43210846",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5067,
+    "fields": {
+      "user_id": "43209856",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5068,
+    "fields": {
+      "user_id": "43433740",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5069,
+    "fields": {
+      "user_id": "43433040",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5070,
+    "fields": {
+      "user_id": "43007964",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5071,
+    "fields": {
+      "user_id": "43435368",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5072,
+    "fields": {
+      "user_id": "42807182",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5073,
+    "fields": {
+      "user_id": "43002002",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5074,
+    "fields": {
+      "user_id": "43429610",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5075,
+    "fields": {
+      "user_id": "43005972",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5076,
+    "fields": {
+      "user_id": "43001970",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5077,
+    "fields": {
+      "user_id": "43002070",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5078,
+    "fields": {
+      "user_id": "43402500",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5079,
+    "fields": {
+      "user_id": "43438516",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5080,
+    "fields": {
+      "user_id": "42808228",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5081,
+    "fields": {
+      "user_id": "43202216",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5082,
+    "fields": {
+      "user_id": "43006978",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5083,
+    "fields": {
+      "user_id": "43434442",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5084,
+    "fields": {
+      "user_id": "43001874",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5085,
+    "fields": {
+      "user_id": "43402794",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5086,
+    "fields": {
+      "user_id": "43402910",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5087,
+    "fields": {
+      "user_id": "43008742",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5088,
+    "fields": {
+      "user_id": "43402526",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5089,
+    "fields": {
+      "user_id": "43432076",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5090,
+    "fields": {
+      "user_id": "42801598",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5091,
+    "fields": {
+      "user_id": "43410750",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5092,
+    "fields": {
+      "user_id": "43402860",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5093,
+    "fields": {
+      "user_id": "43402542",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5094,
+    "fields": {
+      "user_id": "43001816",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5095,
+    "fields": {
+      "user_id": "43008476",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5096,
+    "fields": {
+      "user_id": "43002014",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5097,
+    "fields": {
+      "user_id": "43402408",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5098,
+    "fields": {
+      "user_id": "43009240",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5099,
+    "fields": {
+      "user_id": "43438584",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5100,
+    "fields": {
+      "user_id": "43006742",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5101,
+    "fields": {
+      "user_id": "43202432",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5102,
+    "fields": {
+      "user_id": "43009392",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5103,
+    "fields": {
+      "user_id": "43398652",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5104,
+    "fields": {
+      "user_id": "43209878",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5105,
+    "fields": {
+      "user_id": "43008874",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5106,
+    "fields": {
+      "user_id": "42607696",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5107,
+    "fields": {
+      "user_id": "43210822",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5108,
+    "fields": {
+      "user_id": "43423118",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5109,
+    "fields": {
+      "user_id": "43002066",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5110,
+    "fields": {
+      "user_id": "43429438",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5111,
+    "fields": {
+      "user_id": "43208152",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5112,
+    "fields": {
+      "user_id": "43409106",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5113,
+    "fields": {
+      "user_id": "43436866",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5114,
+    "fields": {
+      "user_id": "43408710",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5115,
+    "fields": {
+      "user_id": "43402588",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5116,
+    "fields": {
+      "user_id": "43402414",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5117,
+    "fields": {
+      "user_id": "43001838",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5118,
+    "fields": {
+      "user_id": "43434720",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5119,
+    "fields": {
+      "user_id": "43202580",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5120,
+    "fields": {
+      "user_id": "43402826",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5121,
+    "fields": {
+      "user_id": "43402876",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5122,
+    "fields": {
+      "user_id": "43209870",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5123,
+    "fields": {
+      "user_id": "43402410",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5124,
+    "fields": {
+      "user_id": "43001862",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5125,
+    "fields": {
+      "user_id": "43402640",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5126,
+    "fields": {
+      "user_id": "43202644",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5127,
+    "fields": {
+      "user_id": "43405064",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5128,
+    "fields": {
+      "user_id": "43402468",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5129,
+    "fields": {
+      "user_id": "43001966",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5130,
+    "fields": {
+      "user_id": "43202566",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5131,
+    "fields": {
+      "user_id": "43007462",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5132,
+    "fields": {
+      "user_id": "43202406",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5133,
+    "fields": {
+      "user_id": "43438606",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5134,
+    "fields": {
+      "user_id": "43202312",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5135,
+    "fields": {
+      "user_id": "43402758",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5136,
+    "fields": {
+      "user_id": "43436424",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5137,
+    "fields": {
+      "user_id": "43202272",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5138,
+    "fields": {
+      "user_id": "43409116",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5139,
+    "fields": {
+      "user_id": "42801366",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5140,
+    "fields": {
+      "user_id": "43001944",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5141,
+    "fields": {
+      "user_id": "43002090",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5142,
+    "fields": {
+      "user_id": "43402840",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5143,
+    "fields": {
+      "user_id": "43408688",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5144,
+    "fields": {
+      "user_id": "43006960",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5145,
+    "fields": {
+      "user_id": "43202634",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5146,
+    "fields": {
+      "user_id": "43007976",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5147,
+    "fields": {
+      "user_id": "43402728",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5148,
+    "fields": {
+      "user_id": "43209840",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5149,
+    "fields": {
+      "user_id": "43402942",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5150,
+    "fields": {
+      "user_id": "43002136",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5151,
+    "fields": {
+      "user_id": "43202452",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5152,
+    "fields": {
+      "user_id": "43402878",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5153,
+    "fields": {
+      "user_id": "43202618",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5154,
+    "fields": {
+      "user_id": "43001910",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5155,
+    "fields": {
+      "user_id": "43202412",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5156,
+    "fields": {
+      "user_id": "43402512",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5157,
+    "fields": {
+      "user_id": "43402440",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5158,
+    "fields": {
+      "user_id": "43409156",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5159,
+    "fields": {
+      "user_id": "43202164",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5160,
+    "fields": {
+      "user_id": "43425724",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5161,
+    "fields": {
+      "user_id": "43202246",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5162,
+    "fields": {
+      "user_id": "42801472",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5163,
+    "fields": {
+      "user_id": "43209734",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5164,
+    "fields": {
+      "user_id": "43007740",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5165,
+    "fields": {
+      "user_id": "43208950",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5166,
+    "fields": {
+      "user_id": "42801720",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5167,
+    "fields": {
+      "user_id": "43439810",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5168,
+    "fields": {
+      "user_id": "43202702",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5169,
+    "fields": {
+      "user_id": "43438934",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5170,
+    "fields": {
+      "user_id": "42808282",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5171,
+    "fields": {
+      "user_id": "42808178",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5172,
+    "fields": {
+      "user_id": "43209954",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5173,
+    "fields": {
+      "user_id": "42604170",
+      "level_of_study": "UG",
+      "year_of_course": 5
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5174,
+    "fields": {
+      "user_id": "43002058",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5175,
+    "fields": {
+      "user_id": "43402956",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5176,
+    "fields": {
+      "user_id": "43002268",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5177,
+    "fields": {
+      "user_id": "43008860",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5178,
+    "fields": {
+      "user_id": "42801572",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5179,
+    "fields": {
+      "user_id": "43402678",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5180,
+    "fields": {
+      "user_id": "43006822",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5181,
+    "fields": {
+      "user_id": "43202170",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5182,
+    "fields": {
+      "user_id": "43202378",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5183,
+    "fields": {
+      "user_id": "43207058",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5184,
+    "fields": {
+      "user_id": "43002038",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5185,
+    "fields": {
+      "user_id": "43408990",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5186,
+    "fields": {
+      "user_id": "43202826",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5187,
+    "fields": {
+      "user_id": "43202678",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5188,
+    "fields": {
+      "user_id": "43411154",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5189,
+    "fields": {
+      "user_id": "43410464",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5190,
+    "fields": {
+      "user_id": "43402398",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5191,
+    "fields": {
+      "user_id": "43409144",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5192,
+    "fields": {
+      "user_id": "43202812",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5193,
+    "fields": {
+      "user_id": "43202294",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5194,
+    "fields": {
+      "user_id": "43202726",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5195,
+    "fields": {
+      "user_id": "43007826",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5196,
+    "fields": {
+      "user_id": "43007414",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5197,
+    "fields": {
+      "user_id": "43409164",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5198,
+    "fields": {
+      "user_id": "43209054",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5199,
+    "fields": {
+      "user_id": "43007092",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5200,
+    "fields": {
+      "user_id": "43402834",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5201,
+    "fields": {
+      "user_id": "43224748",
+      "level_of_study": "PGT",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5202,
+    "fields": {
+      "user_id": "43440372",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5203,
+    "fields": {
+      "user_id": "43007902",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5204,
+    "fields": {
+      "user_id": "43434824",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5205,
+    "fields": {
+      "user_id": "43440262",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5206,
+    "fields": {
+      "user_id": "43402904",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5207,
+    "fields": {
+      "user_id": "43433518",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5208,
+    "fields": {
+      "user_id": "43402652",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5209,
+    "fields": {
+      "user_id": "43006860",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5210,
+    "fields": {
+      "user_id": "43402934",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5211,
+    "fields": {
+      "user_id": "43409152",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5212,
+    "fields": {
+      "user_id": "43208752",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5213,
+    "fields": {
+      "user_id": "43208704",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5214,
+    "fields": {
+      "user_id": "43434502",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5215,
+    "fields": {
+      "user_id": "43438820",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5216,
+    "fields": {
+      "user_id": "42604104",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5217,
+    "fields": {
+      "user_id": "43210168",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5218,
+    "fields": {
+      "user_id": "43408700",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5219,
+    "fields": {
+      "user_id": "43435536",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5220,
+    "fields": {
+      "user_id": "43210084",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5221,
+    "fields": {
+      "user_id": "43002176",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5222,
+    "fields": {
+      "user_id": "43210982",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5223,
+    "fields": {
+      "user_id": "42801628",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5224,
+    "fields": {
+      "user_id": "42801762",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5225,
+    "fields": {
+      "user_id": "42401280",
+      "level_of_study": "UG",
+      "year_of_course": 5
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5226,
+    "fields": {
+      "user_id": "43434142",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5227,
+    "fields": {
+      "user_id": "43229418",
+      "level_of_study": "PGT",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5228,
+    "fields": {
+      "user_id": "43202536",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5229,
+    "fields": {
+      "user_id": "43002010",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5230,
+    "fields": {
+      "user_id": "43236560",
+      "level_of_study": "PGT",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5231,
+    "fields": {
+      "user_id": "43208728",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5232,
+    "fields": {
+      "user_id": "43008638",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5233,
+    "fields": {
+      "user_id": "43009850",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5234,
+    "fields": {
+      "user_id": "43426856",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5235,
+    "fields": {
+      "user_id": "43208178",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5236,
+    "fields": {
+      "user_id": "43002096",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5237,
+    "fields": {
+      "user_id": "43006824",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5238,
+    "fields": {
+      "user_id": "43402464",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5239,
+    "fields": {
+      "user_id": "43001934",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5240,
+    "fields": {
+      "user_id": "43007372",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5241,
+    "fields": {
+      "user_id": "43437150",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5242,
+    "fields": {
+      "user_id": "43432700",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5243,
+    "fields": {
+      "user_id": "43436374",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5244,
+    "fields": {
+      "user_id": "42806986",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5245,
+    "fields": {
+      "user_id": "43006894",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5246,
+    "fields": {
+      "user_id": "43208148",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5247,
+    "fields": {
+      "user_id": "43209156",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5248,
+    "fields": {
+      "user_id": "43002214",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5249,
+    "fields": {
+      "user_id": "43009568",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5250,
+    "fields": {
+      "user_id": "43001864",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5251,
+    "fields": {
+      "user_id": "42801384",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5252,
+    "fields": {
+      "user_id": "43007752",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5253,
+    "fields": {
+      "user_id": "43002216",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5254,
+    "fields": {
+      "user_id": "43209236",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5255,
+    "fields": {
+      "user_id": "42604164",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5256,
+    "fields": {
+      "user_id": "43202258",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5257,
+    "fields": {
+      "user_id": "42801422",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5258,
+    "fields": {
+      "user_id": "43008430",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5259,
+    "fields": {
+      "user_id": "43007866",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5260,
+    "fields": {
+      "user_id": "43436204",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5261,
+    "fields": {
+      "user_id": "43433944",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5262,
+    "fields": {
+      "user_id": "43208324",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5263,
+    "fields": {
+      "user_id": "43210620",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5264,
+    "fields": {
+      "user_id": "43209346",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5265,
+    "fields": {
+      "user_id": "43001990",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5266,
+    "fields": {
+      "user_id": "43436706",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5267,
+    "fields": {
+      "user_id": "43002062",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5268,
+    "fields": {
+      "user_id": "43402846",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5269,
+    "fields": {
+      "user_id": "43433666",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5270,
+    "fields": {
+      "user_id": "43202446",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5271,
+    "fields": {
+      "user_id": "42801364",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5272,
+    "fields": {
+      "user_id": "43409104",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5273,
+    "fields": {
+      "user_id": "43202284",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5274,
+    "fields": {
+      "user_id": "43409114",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5275,
+    "fields": {
+      "user_id": "43209626",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5276,
+    "fields": {
+      "user_id": "43202464",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5277,
+    "fields": {
+      "user_id": "43202810",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5278,
+    "fields": {
+      "user_id": "43402552",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5279,
+    "fields": {
+      "user_id": "43006148",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5280,
+    "fields": {
+      "user_id": "43202456",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5281,
+    "fields": {
+      "user_id": "43008684",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5282,
+    "fields": {
+      "user_id": "43210224",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5283,
+    "fields": {
+      "user_id": "43402724",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5284,
+    "fields": {
+      "user_id": "43408714",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5285,
+    "fields": {
+      "user_id": "43408734",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5286,
+    "fields": {
+      "user_id": "43420404",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5287,
+    "fields": {
+      "user_id": "43402534",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5288,
+    "fields": {
+      "user_id": "43202786",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5289,
+    "fields": {
+      "user_id": "43202250",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5290,
+    "fields": {
+      "user_id": "43202278",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5291,
+    "fields": {
+      "user_id": "43440042",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5292,
+    "fields": {
+      "user_id": "43202426",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5293,
+    "fields": {
+      "user_id": "43408730",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5294,
+    "fields": {
+      "user_id": "43402818",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5295,
+    "fields": {
+      "user_id": "43202540",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5296,
+    "fields": {
+      "user_id": "43408690",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5297,
+    "fields": {
+      "user_id": "42801590",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5298,
+    "fields": {
+      "user_id": "43428256",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5299,
+    "fields": {
+      "user_id": "43402796",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5300,
+    "fields": {
+      "user_id": "43002242",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5301,
+    "fields": {
+      "user_id": "43202380",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5302,
+    "fields": {
+      "user_id": "43209864",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5303,
+    "fields": {
+      "user_id": "42805744",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5304,
+    "fields": {
+      "user_id": "43402498",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5305,
+    "fields": {
+      "user_id": "43429726",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5306,
+    "fields": {
+      "user_id": "43001850",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5307,
+    "fields": {
+      "user_id": "43433660",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5308,
+    "fields": {
+      "user_id": "43409140",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5309,
+    "fields": {
+      "user_id": "43436196",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5310,
+    "fields": {
+      "user_id": "43202554",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5311,
+    "fields": {
+      "user_id": "43410104",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5312,
+    "fields": {
+      "user_id": "43402836",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5313,
+    "fields": {
+      "user_id": "42604146",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5314,
+    "fields": {
+      "user_id": "43209100",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5315,
+    "fields": {
+      "user_id": "43208572",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5316,
+    "fields": {
+      "user_id": "42801588",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5317,
+    "fields": {
+      "user_id": "43202532",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5318,
+    "fields": {
+      "user_id": "42604168",
+      "level_of_study": "UG",
+      "year_of_course": 5
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5319,
+    "fields": {
+      "user_id": "43202256",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5320,
+    "fields": {
+      "user_id": "43202206",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5321,
+    "fields": {
+      "user_id": "43006820",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5322,
+    "fields": {
+      "user_id": "43002008",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5323,
+    "fields": {
+      "user_id": "43440220",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5324,
+    "fields": {
+      "user_id": "43408686",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5325,
+    "fields": {
+      "user_id": "43008218",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5326,
+    "fields": {
+      "user_id": "43202764",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5327,
+    "fields": {
+      "user_id": "43210810",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5328,
+    "fields": {
+      "user_id": "43202708",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5329,
+    "fields": {
+      "user_id": "43010212",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5330,
+    "fields": {
+      "user_id": "42801446",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5331,
+    "fields": {
+      "user_id": "43202550",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5332,
+    "fields": {
+      "user_id": "43202466",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5333,
+    "fields": {
+      "user_id": "42805860",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5334,
+    "fields": {
+      "user_id": "43410230",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5335,
+    "fields": {
+      "user_id": "43001982",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5336,
+    "fields": {
+      "user_id": "43210402",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5337,
+    "fields": {
+      "user_id": "43007654",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5338,
+    "fields": {
+      "user_id": "43402402",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5339,
+    "fields": {
+      "user_id": "43202564",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5340,
+    "fields": {
+      "user_id": "42404828",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5341,
+    "fields": {
+      "user_id": "43208834",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5342,
+    "fields": {
+      "user_id": "43438120",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5343,
+    "fields": {
+      "user_id": "43439762",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5344,
+    "fields": {
+      "user_id": "43402708",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5345,
+    "fields": {
+      "user_id": "43007052",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5346,
+    "fields": {
+      "user_id": "43402562",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5347,
+    "fields": {
+      "user_id": "43202522",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5348,
+    "fields": {
+      "user_id": "43002170",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5349,
+    "fields": {
+      "user_id": "43436892",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5350,
+    "fields": {
+      "user_id": "43202360",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5351,
+    "fields": {
+      "user_id": "43438592",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5352,
+    "fields": {
+      "user_id": "42607364",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5353,
+    "fields": {
+      "user_id": "42806650",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5354,
+    "fields": {
+      "user_id": "43408696",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5355,
+    "fields": {
+      "user_id": "43202266",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5356,
+    "fields": {
+      "user_id": "43202168",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5357,
+    "fields": {
+      "user_id": "43001902",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5358,
+    "fields": {
+      "user_id": "43007988",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5359,
+    "fields": {
+      "user_id": "43402510",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5360,
+    "fields": {
+      "user_id": "43402702",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5361,
+    "fields": {
+      "user_id": "42801522",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5362,
+    "fields": {
+      "user_id": "43006764",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5363,
+    "fields": {
+      "user_id": "43202694",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5364,
+    "fields": {
+      "user_id": "43002122",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5365,
+    "fields": {
+      "user_id": "43202384",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5366,
+    "fields": {
+      "user_id": "43402810",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5367,
+    "fields": {
+      "user_id": "43402566",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5368,
+    "fields": {
+      "user_id": "43002000",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5369,
+    "fields": {
+      "user_id": "42606996",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5370,
+    "fields": {
+      "user_id": "43006702",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5371,
+    "fields": {
+      "user_id": "43434482",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5372,
+    "fields": {
+      "user_id": "43208108",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5373,
+    "fields": {
+      "user_id": "43002184",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5374,
+    "fields": {
+      "user_id": "42801680",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5375,
+    "fields": {
+      "user_id": "43202462",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5376,
+    "fields": {
+      "user_id": "43202276",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5377,
+    "fields": {
+      "user_id": "43434826",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5378,
+    "fields": {
+      "user_id": "43002270",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5379,
+    "fields": {
+      "user_id": "43402450",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5380,
+    "fields": {
+      "user_id": "43202414",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5381,
+    "fields": {
+      "user_id": "43202410",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5382,
+    "fields": {
+      "user_id": "43202260",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5383,
+    "fields": {
+      "user_id": "43408716",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5384,
+    "fields": {
+      "user_id": "43202348",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5385,
+    "fields": {
+      "user_id": "43409916",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5386,
+    "fields": {
+      "user_id": "43208992",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5387,
+    "fields": {
+      "user_id": "43001802",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5388,
+    "fields": {
+      "user_id": "43410084",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5389,
+    "fields": {
+      "user_id": "43409160",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5390,
+    "fields": {
+      "user_id": "43202318",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5391,
+    "fields": {
+      "user_id": "43432268",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5392,
+    "fields": {
+      "user_id": "43402766",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5393,
+    "fields": {
+      "user_id": "43437560",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5394,
+    "fields": {
+      "user_id": "42801576",
+      "level_of_study": "UG",
+      "year_of_course": 4
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5395,
+    "fields": {
+      "user_id": "43402480",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5396,
+    "fields": {
+      "user_id": "43402586",
+      "level_of_study": "UG",
+      "year_of_course": 0
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5397,
+    "fields": {
+      "user_id": "43402806",
+      "level_of_study": "UG",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5398,
+    "fields": {
+      "user_id": "43202588",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5399,
+    "fields": {
+      "user_id": "42805818",
+      "level_of_study": "UG",
+      "year_of_course": 3
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5400,
+    "fields": {
+      "user_id": "43438920",
+      "level_of_study": "PGT",
+      "year_of_course": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5401,
+    "fields": {
+      "user_id": "43202194",
+      "level_of_study": "UG",
+      "year_of_course": 2
+    }
+  }
+]
